@@ -1,3 +1,5 @@
-t1,t1,11/12/2022,1,true,Class 2,t1,t1,2
-t2,t2,30/11/2023,2,true,Class 3,t1!gmail.com,t1,0
-Sahil,Mattoo,04/12/2023,3,true,Class 5,abc@gmail.com,1234,0
+John,Doe,01/01/2020,101,true,Class 1,john.doe@example.com,pass123,10
+Jane,Smith,15/02/2020,102,false,,jane.smith@example.com,pass456,15
+Emily,Jones,20/03/2020,103,true,Class 3,emily.jones@example.com,pass789,20
+Mike,Brown,10/04/2020,104,false,,mike.brown@example.com,pass101,5
+Anna,Johnson,25/05/2020,105,true,Class 2,anna.johnson@example.com,pass102,30

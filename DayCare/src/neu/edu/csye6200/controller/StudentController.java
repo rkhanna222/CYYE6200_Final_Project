@@ -147,6 +147,8 @@ public class StudentController {
         studentJPanel.getUpdateStudentJPanel().getTxtFieldFatherName().setText(s.getFatherName());
         studentJPanel.getUpdateStudentJPanel().getTxtFieldMotherName().setText(s.getMotherName());
         studentJPanel.getUpdateStudentJPanel().getTxtFieldStudentId().setText(Integer.toString(s.getStuId()));
+        studentJPanel.getUpdateStudentJPanel().getTxtFieldAddress().setText(s.getAddress());
+        studentJPanel.getUpdateStudentJPanel().getTxtFieldPhone().setText(Long.toString(s.getPhoneNo()));
     }
     
     
@@ -160,10 +162,9 @@ public class StudentController {
         String age =  studentJPanel.getUpdateStudentJPanel().getTxtFieldAge().getText();
         String fatherName = studentJPanel.getUpdateStudentJPanel().getTxtFieldFatherName().getText();
         String motherName = studentJPanel.getUpdateStudentJPanel().getTxtFieldMotherName().getText();
-//        String address = studentJPanel.getUpdateStudentJPanel().getTxtFieldAddress().getText();
-//        String phoneNo = studentJPanel.getUpdateStudentJPanel().getTxtFieldPhone().getText();
-        String address = s.getAddress();
-        int phoneNo = s.getPhoneNo();
+        String address = studentJPanel.getUpdateStudentJPanel().getTxtFieldAddress().getText();
+        long phoneNo = s.getPhoneNo();
+       
         
         
         

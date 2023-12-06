@@ -57,6 +57,8 @@ public class FileIO<T> {
 	public static <T> List<T> readFile(Class<T> clazz, String pathToCsvFile) throws ParseException {
             List<T> data = new ArrayList<>();
                String fileName = "../../../../resources/" + pathToCsvFile;
+               //String fileName = "src/resources/"+ pathToCsvFile;
+                System.out.print(fileName);
 		try (BufferedReader inLine = new BufferedReader(new FileReader(pathToCsvFile)))
 		{
 			String inputLine = null;	// read one line from file at a time
@@ -72,7 +74,7 @@ public class FileIO<T> {
 					String fatherName = fields[5];
 					String motherName = fields[6];
                                         String address = fields[7];
-                                        int phoneNo = Integer.parseInt(fields[8]);
+                                        long phoneNo = Long.parseLong(fields[8]);
                                         double GPA = Double.parseDouble(fields[9]);
                                         String email = fields[10];
                                         String password = fields[11];
@@ -109,6 +111,7 @@ public class FileIO<T> {
 		   // catch IOException (and implicitly FileNotFoundException)
 		   e.printStackTrace();
 	   }
+          System.out.println("Data :" + data);
 	  return data;
         }
             

@@ -16,7 +16,7 @@ public class Student extends Person{
     private String motherName;
     private List<Immunization> immunizations;
     private String address;
-    private int phoneNo;
+    private long phoneNo;
     private double GPA;
     private String emailid;
     private String password;
@@ -35,7 +35,7 @@ public class Student extends Person{
 
     public Student(String firstName, String lastName,Date registerTime,
             int stuId, int age, String fatherName, String motherName,
-            String address, int phoneNo, double GPA,
+            String address, long phoneNo, double GPA,
             String emailid, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -77,11 +77,11 @@ public class Student extends Person{
         this.address = address;
     }
 
-    public int getPhoneNo() {
+    public long getPhoneNo() {
         return phoneNo;
     }
 
-    public void setPhoneNo(int phoneNo) {
+    public void setPhoneNo(long phoneNo) {
         this.phoneNo = phoneNo;
     }
 

@@ -137,6 +137,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         List <Teacher> teacher = null;
         try {
             teacher = FileIO.readFile(Teacher.class,"teacher.csv");
+            System.out.println(teacher);
         } catch (ParseException ex) {
             Logger.getLogger(LoginJFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
