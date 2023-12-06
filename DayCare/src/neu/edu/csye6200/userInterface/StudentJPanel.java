@@ -6,10 +6,16 @@
 package neu.edu.csye6200.userInterface;
 
 import java.awt.CardLayout;
+import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
+import javax.swing.table.DefaultTableModel;
+import neu.edu.csye6200.data.DataStore;
+import neu.edu.csye6200.interfaces.StudentDataMangementFactory;
+import neu.edu.csye6200.model.Rules;
+import neu.edu.csye6200.model.Student;
 
 /**
  *
@@ -23,6 +29,7 @@ public class StudentJPanel extends javax.swing.JPanel {
     private UpdateStudentJPanel updateStudentJPanel;
     private AddStudentJPanel addStudentJPanel;
     private JPanel userProcessControllerJPanel;
+    private ViewAllStudentJPanel viewAllStudentJPanel;
     public StudentJPanel(JPanel userProcessControllerJPanel) {
         initComponents();
         this.userProcessControllerJPanel = userProcessControllerJPanel;
@@ -43,6 +50,7 @@ public class StudentJPanel extends javax.swing.JPanel {
         txtFieldStudentId = new javax.swing.JTextField();
         updateStudentBtn = new javax.swing.JToggleButton();
         btnAddStudent = new javax.swing.JButton();
+        viewAllStudentsBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -69,6 +77,14 @@ public class StudentJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewAllStudentsBtn.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        viewAllStudentsBtn.setText("View All Students");
+        viewAllStudentsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewAllStudentsBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,10 +98,12 @@ public class StudentJPanel extends javax.swing.JPanel {
                         .addGap(80, 80, 80)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(updateStudentBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtFieldStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAddStudent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(viewAllStudentsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(updateStudentBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtFieldStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnAddStudent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(231, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -104,7 +122,9 @@ public class StudentJPanel extends javax.swing.JPanel {
                 .addComponent(updateStudentBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAddStudent)
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(viewAllStudentsBtn)
+                .addContainerGap(173, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -115,6 +135,11 @@ public class StudentJPanel extends javax.swing.JPanel {
     private void btnAddStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddStudentActionPerformed
        
     }//GEN-LAST:event_btnAddStudentActionPerformed
+
+    private void viewAllStudentsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAllStudentsBtnActionPerformed
+        // TODO add your handling code here:
+        viewAllStudent();
+    }//GEN-LAST:event_viewAllStudentsBtnActionPerformed
     public void updateStudent(){
        updateStudentJPanel = new UpdateStudentJPanel(userProcessControllerJPanel);
        userProcessControllerJPanel.add("UpdateStudentJPanel",updateStudentJPanel);
@@ -124,6 +149,12 @@ public class StudentJPanel extends javax.swing.JPanel {
     public void addStudent(){
        addStudentJPanel = new AddStudentJPanel();
        userProcessControllerJPanel.add("addStudentJPanel",addStudentJPanel);
+       CardLayout layout = (CardLayout) userProcessControllerJPanel.getLayout();
+       layout.next(userProcessControllerJPanel);
+    }
+    public void viewAllStudent(){
+       viewAllStudentJPanel = new ViewAllStudentJPanel();
+       userProcessControllerJPanel.add("ViewAllStudentJPanel",viewAllStudentJPanel);
        CardLayout layout = (CardLayout) userProcessControllerJPanel.getLayout();
        layout.next(userProcessControllerJPanel);
     }
@@ -151,6 +182,15 @@ public class StudentJPanel extends javax.swing.JPanel {
         this.updateStudentJPanel = updateStudentJPanel;
     }
 
+    public ViewAllStudentJPanel getViewAllStudentJPanel() {
+        return viewAllStudentJPanel;
+    }
+
+    public void setViewAllStudentJPanel(ViewAllStudentJPanel viewAllStudentJPanel) {
+        this.viewAllStudentJPanel = viewAllStudentJPanel;
+    }
+
+    
     public JPanel getUserProcessControllerJPanel() {
         return userProcessControllerJPanel;
     }
@@ -175,5 +215,6 @@ public class StudentJPanel extends javax.swing.JPanel {
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTextField txtFieldStudentId;
     private javax.swing.JToggleButton updateStudentBtn;
+    private javax.swing.JButton viewAllStudentsBtn;
     // End of variables declaration//GEN-END:variables
 }
