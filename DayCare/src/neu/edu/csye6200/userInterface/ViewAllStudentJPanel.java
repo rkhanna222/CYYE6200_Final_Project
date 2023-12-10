@@ -5,6 +5,8 @@
  */
 package neu.edu.csye6200.userInterface;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import neu.edu.csye6200.interfaces.StudentDataMangementFactory;
@@ -32,7 +34,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             // create a row and pouplate each rules data  in the row
             Object[] row = new Object[dtm.getColumnCount()];
             
-                row[0]=student.getStuId();
+            row[0]=student.getStuId();
             row[1]=student.getFirstName();
             row[2]=student.getLastName();
             row[3]= student.getEmailid();
@@ -40,6 +42,89 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             dtm.addRow(row);
         } 
     }
+    
+    private void sortStudentByID(){
+         DefaultTableModel model = (DefaultTableModel) studentsTable.getModel();
+        List<Student> studentList = StudentDataMangementFactory.getFactoryInstance().getObject().getDataList();
+
+        // Sort the student list by ID
+        Collections.sort(studentList, Comparator.comparingInt(Student::getStuId));
+
+        // Clear the table before repopulating
+        model.setRowCount(0);
+
+        // Repopulate the table model with the sorted list
+        for (Student student : studentList) {
+            Student s = (Student) student;
+            Object[] row = new Object[6];
+            
+            row[0]=student.getStuId();
+            row[1]=student.getFirstName();
+            row[2]=student.getLastName();
+            row[3]= student.getEmailid();
+            row[4]= student.getGPA();
+            
+            model.addRow(row);
+        }
+    }
+    
+       private void sortStudentByName(){
+         DefaultTableModel model = (DefaultTableModel) studentsTable.getModel();
+        List<Student> studentList = StudentDataMangementFactory.getFactoryInstance().getObject().getDataList();
+
+        // Sort the student list by name
+        Collections.sort(studentList, (s1, s2) -> {
+            String name1 = s1.getFirstName() + " " + s1.getLastName();
+            String name2 = s2.getFirstName() + " " + s2.getLastName();
+            return name1.compareToIgnoreCase(name2);
+        });
+
+        // Clear the table before repopulating
+        model.setRowCount(0);
+
+        // Repopulate the table model with the sorted list
+        for (Student student : studentList) {
+            Student s = (Student) student;
+            Object[] row = new Object[6];
+            
+            row[0]=student.getStuId();
+            row[1]=student.getFirstName();
+            row[2]=student.getLastName();
+            row[3]= student.getEmailid();
+            row[4]= student.getGPA();
+            
+            model.addRow(row);
+        }
+    }
+       
+       private void sortStudentByGPA(){
+    DefaultTableModel model = (DefaultTableModel) studentsTable.getModel();
+    List<Student> studentList = StudentDataMangementFactory.getFactoryInstance().getObject().getDataList();
+
+    // Sort the student list by GPA
+    Collections.sort(studentList, (s1, s2) -> {
+        Double gpa1 = s1.getGPA();
+        Double gpa2 = s2.getGPA();
+        return gpa1.compareTo(gpa2);
+    });
+
+    // Clear the table before repopulating
+    model.setRowCount(0);
+
+    // Repopulate the table model with the sorted list
+    for (Student student : studentList) {
+        Object[] row = new Object[6];
+        
+        row[0] = student.getStuId();
+        row[1] = student.getFirstName();
+        row[2] = student.getLastName();
+        row[3] = student.getEmailid();
+        row[4] = student.getGPA();
+        
+        model.addRow(row);
+    }
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,6 +141,9 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         studentsTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        sortByGPAButton = new javax.swing.JButton();
+        sortByIdButton = new javax.swing.JButton();
+        sortByNameButton = new javax.swing.JButton();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -95,8 +183,35 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setText("All Students");
 
+        sortByGPAButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        sortByGPAButton.setText("Sort By GPA");
+        sortByGPAButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortByGPAButtonActionPerformed(evt);
+            }
+        });
+
+        sortByIdButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        sortByIdButton.setText("Sort By ID");
+        sortByIdButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortByIdButtonActionPerformed(evt);
+            }
+        });
+
+        sortByNameButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        sortByNameButton.setText("Sort By Name");
+        sortByNameButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortByNameButtonActionPerformed(evt);
+            }
+        });
+
         jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(sortByGPAButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(sortByIdButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(sortByNameButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -105,21 +220,35 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(288, 288, 288)
+                        .addComponent(jLabel1))
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(179, 179, 179)
-                        .addComponent(jLabel1)))
-                .addContainerGap(73, Short.MAX_VALUE))
+                        .addGap(177, 177, 177)
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(sortByIdButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sortByNameButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(sortByGPAButton)
+                                .addGap(47, 47, 47))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sortByIdButton)
+                    .addComponent(sortByGPAButton)
+                    .addComponent(sortByNameButton))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -134,6 +263,21 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void sortByGPAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortByGPAButtonActionPerformed
+        // TODO add your handling code here:
+        sortStudentByGPA();
+    }//GEN-LAST:event_sortByGPAButtonActionPerformed
+
+    private void sortByIdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortByIdButtonActionPerformed
+        // TODO add your handling code here:
+        sortStudentByID();
+    }//GEN-LAST:event_sortByIdButtonActionPerformed
+
+    private void sortByNameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortByNameButtonActionPerformed
+        // TODO add your handling code here:
+        sortStudentByName();
+    }//GEN-LAST:event_sortByNameButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame jFrame1;
@@ -141,6 +285,9 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton sortByGPAButton;
+    private javax.swing.JButton sortByIdButton;
+    private javax.swing.JButton sortByNameButton;
     private javax.swing.JTable studentsTable;
     // End of variables declaration//GEN-END:variables
 }
