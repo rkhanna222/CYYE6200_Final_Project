@@ -44,6 +44,7 @@ public class MainJFrame extends javax.swing.JFrame {
         logoutBtn = new javax.swing.JButton();
         btnRenewal1 = new javax.swing.JButton();
         userProcessControllerJPanel = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -64,6 +65,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setLayout(null);
 
         containerJPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -79,6 +81,7 @@ public class MainJFrame extends javax.swing.JFrame {
         mainHeadingLabel.setText("Day Care");
         mainHeadingLabel.setToolTipText("Day Care");
 
+        adminBtn.setBackground(new java.awt.Color(204, 204, 255));
         adminBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         adminBtn.setText("Administrator");
         adminBtn.setToolTipText("Admin");
@@ -92,6 +95,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        teacherBtn.setBackground(new java.awt.Color(204, 204, 255));
         teacherBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         teacherBtn.setText("Teacher");
         teacherBtn.setToolTipText("teacher");
@@ -104,6 +108,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        studentBtn1.setBackground(new java.awt.Color(204, 204, 255));
         studentBtn1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         studentBtn1.setText("Student");
         studentBtn1.setToolTipText("Student");
@@ -116,6 +121,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnStateRules.setBackground(new java.awt.Color(204, 204, 255));
         btnStateRules.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnStateRules.setText("State Rules");
         btnStateRules.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -125,6 +131,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnRenewal.setBackground(new java.awt.Color(204, 204, 255));
         btnRenewal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnRenewal.setText("Renewal ");
         btnRenewal.setToolTipText("Student");
@@ -137,6 +144,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        logoutBtn.setBackground(new java.awt.Color(255, 102, 102));
         logoutBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         logoutBtn.setText("Logout");
         logoutBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -145,6 +153,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnRenewal1.setBackground(new java.awt.Color(204, 204, 255));
         btnRenewal1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnRenewal1.setText("Statistics");
         btnRenewal1.setToolTipText("Student");
@@ -161,17 +170,17 @@ public class MainJFrame extends javax.swing.JFrame {
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(adminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
-            .addComponent(teacherBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+            .addComponent(adminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+            .addComponent(teacherBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
             .addComponent(studentBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(mainHeadingLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnStateRules, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnRenewal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(logoutBtn)
-                .addGap(22, 22, 22))
             .addComponent(btnRenewal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(controlJPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(logoutBtn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,38 +199,39 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnRenewal, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRenewal1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGap(59, 59, 59)
                 .addComponent(logoutBtn)
-                .addGap(51, 51, 51))
+                .addContainerGap(404, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlJPanel);
 
         userProcessControllerJPanel.setBackground(new java.awt.Color(255, 255, 255));
         userProcessControllerJPanel.setLayout(new java.awt.CardLayout());
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/dayCare1.jpeg"))); // NOI18N
+        jLabel4.setPreferredSize(new java.awt.Dimension(800, 491));
+        userProcessControllerJPanel.add(jLabel4, "card2");
+
         splitPane.setRightComponent(userProcessControllerJPanel);
 
         javax.swing.GroupLayout containerJPanelLayout = new javax.swing.GroupLayout(containerJPanel);
         containerJPanel.setLayout(containerJPanelLayout);
         containerJPanelLayout.setHorizontalGroup(
             containerJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(containerJPanelLayout.createSequentialGroup()
+                .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         containerJPanelLayout.setVerticalGroup(
             containerJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(containerJPanelLayout.createSequentialGroup()
+                .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 874, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(containerJPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(containerJPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(containerJPanel);
+        containerJPanel.setBounds(0, 0, 1240, 830);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -375,6 +385,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton logoutBtn;
     private javax.swing.JLabel mainHeadingLabel;

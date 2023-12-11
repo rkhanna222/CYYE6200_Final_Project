@@ -51,15 +51,23 @@ public class StudentJPanel extends javax.swing.JPanel {
         updateStudentBtn = new javax.swing.JToggleButton();
         btnAddStudent = new javax.swing.JButton();
         viewAllStudentsBtn = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Student Details");
+        add(jLabel2);
+        jLabel2.setBounds(348, 33, 312, 65);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Student Id:");
+        add(jLabel1);
+        jLabel1.setBounds(373, 179, 97, 22);
+        add(txtFieldStudentId);
+        txtFieldStudentId.setBounds(505, 179, 145, 26);
 
         updateStudentBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         updateStudentBtn.setText("View or Update Student Record");
@@ -68,6 +76,8 @@ public class StudentJPanel extends javax.swing.JPanel {
                 updateStudentBtnActionPerformed(evt);
             }
         });
+        add(updateStudentBtn);
+        updateStudentBtn.setBounds(346, 253, 314, 34);
 
         btnAddStudent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnAddStudent.setText("Add New Student");
@@ -76,56 +86,22 @@ public class StudentJPanel extends javax.swing.JPanel {
                 btnAddStudentActionPerformed(evt);
             }
         });
+        add(btnAddStudent);
+        btnAddStudent.setBounds(346, 317, 314, 30);
 
-        viewAllStudentsBtn.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        viewAllStudentsBtn.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         viewAllStudentsBtn.setText("View All Students");
         viewAllStudentsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewAllStudentsBtnActionPerformed(evt);
             }
         });
+        add(viewAllStudentsBtn);
+        viewAllStudentsBtn.setBounds(346, 380, 314, 30);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(viewAllStudentsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(updateStudentBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtFieldStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnAddStudent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(231, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(txtFieldStudentId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(updateStudentBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnAddStudent)
-                .addGap(18, 18, 18)
-                .addComponent(viewAllStudentsBtn)
-                .addContainerGap(173, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ss.jpeg"))); // NOI18N
+        add(jLabel3);
+        jLabel3.setBounds(0, 0, 1000, 680);
     }// </editor-fold>//GEN-END:initComponents
 
     private void updateStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateStudentBtnActionPerformed
@@ -212,6 +188,7 @@ public class StudentJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAddStudent;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTextField txtFieldStudentId;
     private javax.swing.JToggleButton updateStudentBtn;
