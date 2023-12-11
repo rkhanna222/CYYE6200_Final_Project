@@ -77,6 +77,11 @@ public class ClassRoomJPanel extends javax.swing.JPanel {
         btnUploadCSV.setText("Upload Student Roster");
 
         btnshowDetails.setText("Show Details");
+        btnshowDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnshowDetailsActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -113,6 +118,10 @@ public class ClassRoomJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnshowDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnshowDetailsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnshowDetailsActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JToggleButton btnUploadCSV;
@@ -129,6 +138,22 @@ public class ClassRoomJPanel extends javax.swing.JPanel {
 
     public void setTblClassRooms(JTable tblClassRooms) {
         this.tblClassRooms = tblClassRooms;
+    }
+
+    public void setBtnUploadCSV(JToggleButton btnUploadCSV) {
+        this.btnUploadCSV = btnUploadCSV;
+    }
+
+    public void setBtnshowDetails(JToggleButton btnshowDetails) {
+        this.btnshowDetails = btnshowDetails;
+    }
+
+    public JToggleButton getBtnUploadCSV() {
+        return btnUploadCSV;
+    }
+
+    public JToggleButton getBtnshowDetails() {
+        return btnshowDetails;
     }
 
 }
