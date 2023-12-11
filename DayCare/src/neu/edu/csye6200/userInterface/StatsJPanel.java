@@ -5,8 +5,28 @@
  */
 package neu.edu.csye6200.userInterface;
 
+import java.awt.BorderLayout;
 import java.awt.CardLayout;
+import java.awt.Color;
+import java.text.DecimalFormat;
+import java.util.List;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
+import neu.edu.csye6200.interfaces.ImmunizationDataManagementFactory;
+import neu.edu.csye6200.interfaces.StudentDataMangementFactory;
+import neu.edu.csye6200.model.Immunization;
+import neu.edu.csye6200.model.Student;
+import neu.edu.csye6200.util.GraphUtil;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.labels.PieSectionLabelGenerator;
+import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
+import org.jfree.chart.plot.PiePlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.CategoryDataset;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.general.DefaultPieDataset;
 
 /**
  *
@@ -17,11 +37,11 @@ public class StatsJPanel extends javax.swing.JPanel {
     /**
      * Creates new form StatsJpanel
      */
+    private GraphUtil gu;
     private JPanel userProcessContainerJPanel;
-    private EnrollmentGraphJPanel enrollmentGraphJPanel;
-    private ImmunizationGraphJPanel immunizationGraphJPanel;
     public StatsJPanel(JPanel userProcessContainerJPanel) {
         initComponents();
+        gu=new GraphUtil();
         this.userProcessContainerJPanel =userProcessContainerJPanel;
     }
     public StatsJPanel() {
@@ -90,26 +110,14 @@ public class StatsJPanel extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        enrollGraph();
+        gu.createBarChart();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        immuneGraph();
+        gu.createPieChart();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-     public void enrollGraph(){
-       enrollmentGraphJPanel = new EnrollmentGraphJPanel();
-       userProcessContainerJPanel.add("EnrollmentGraphJPanel",enrollmentGraphJPanel);
-       CardLayout layout = (CardLayout) userProcessContainerJPanel.getLayout();
-       layout.next(userProcessContainerJPanel);
-    }
-    public void immuneGraph(){
-       immunizationGraphJPanel = new ImmunizationGraphJPanel();
-       userProcessContainerJPanel.add("ImmunizationGraphJPanel",immunizationGraphJPanel);
-       CardLayout layout = (CardLayout) userProcessContainerJPanel.getLayout();
-       layout.next(userProcessContainerJPanel);
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
