@@ -19,7 +19,7 @@ import neu.edu.csye6200.model.Teacher;
 
 /**
  *
- * @author sahilmattoo
+ * @author raghavkhanna
  */
 public class FileIO<T> {
 
@@ -37,6 +37,7 @@ public class FileIO<T> {
 	
 	public static <T> void writeFileAppended(List<T> data, String fileName) {   
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter(new File(fileName), true))) {
+                     System.out.println("writeFileAppended");
 			for(T t:data){
                             bw.append(t.toString());
                             bw.newLine();
@@ -58,14 +59,16 @@ public class FileIO<T> {
             List<T> data = new ArrayList<>();
                String fileName = "../../../../resources/" + pathToCsvFile;
                //String fileName = "src/resources/"+ pathToCsvFile;
-                System.out.print(fileName);
+                System.out.println(pathToCsvFile);
 		try (BufferedReader inLine = new BufferedReader(new FileReader(pathToCsvFile)))
 		{
 			String inputLine = null;	// read one line from file at a time
 			while ((inputLine = inLine.readLine()) != null){
+                            System.out.println("Check 1");
 				// Parse line converting each string token into a Student object field
 				String[] fields = inputLine.split(",");
 				if(pathToCsvFile.equalsIgnoreCase("student.csv")) {
+                                     System.out.println("Check 2");
                                         String fname = fields[0];
 					String lname = fields[1];
                                         Date registerTime=new SimpleDateFormat("dd/MM/yyyy").parse(fields[2]); 
@@ -111,8 +114,38 @@ public class FileIO<T> {
 		   // catch IOException (and implicitly FileNotFoundException)
 		   e.printStackTrace();
 	   }
+          System.out.println("Check 1");
           System.out.println("Data :" + data);
 	  return data;
         }
+        
+        public static <T> List<T> readUploadedFile(Class<T> clazz, String pathToUploadedFile) throws ParseException {
+    List<T> data = new ArrayList<>();
+    try (BufferedReader inLine = new BufferedReader(new FileReader(pathToUploadedFile))) {
+        String inputLine;
+        while ((inputLine = inLine.readLine()) != null) {
+            // Parse line converting each string token into a Student object field
+            String[] fields = inputLine.split(",");
+            String fname = fields[0];
+            String lname = fields[1];
+            Date registerTime = new SimpleDateFormat("dd/MM/yyyy").parse(fields[2]); 
+            int id = Integer.parseInt(fields[3]);
+            int age = Integer.parseInt(fields[4]);
+            String fatherName = fields[5];
+            String motherName = fields[6];
+            String address = fields[7];
+            long phoneNo = Long.parseLong(fields[8]);
+            double GPA = Double.parseDouble(fields[9]);
+            String email = fields[10];
+            String password = fields[11];
+            T s = (T) new Student(fname, lname, registerTime, id, age, fatherName, motherName, address, phoneNo, GPA, email, password);
+            data.add(s);
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return data;
+}
+
             
 }
