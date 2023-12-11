@@ -5,6 +5,8 @@
  */
 package neu.edu.csye6200.interfaces;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +17,7 @@ import neu.edu.csye6200.util.FileIO;
 
 /**
  *
- * @author moinu
+ * @author raghavkhanna
  */
     public class StudentDataManagement implements DataManagement<Student>{
         @Override
@@ -103,5 +105,24 @@ import neu.edu.csye6200.util.FileIO;
 	public void rewriteData(List<Student> list) {
 		FileIO.writeFile(list, Student.class, "student.csv");
 	}
+        
+        
+        // In StudentDataManagement class
+
+public void uploadStudentsFromCSV(String filePath) {
+    try {
+        // Read new students from the CSV file using the absolute file path
+        List<Student> newStudents = FileIO.readUploadedFile(Student.class, filePath);
+
+        // Append each new student to the existing student.csv file
+        System.out.println("uploadStudentsFromCSV");
+        FileIO.writeFileAppended(newStudents, "student.csv");
+    } catch (ParseException e) {
+        Logger.getLogger(StudentDataManagement.class.getName()).log(Level.SEVERE, null, e);
+    }
+}
+
+        
+        
     
 }
