@@ -57,9 +57,9 @@ public class ClassRoomController {
             showFileChooserAndUploadCSV();
         });
         
-         btnshowDetails.addActionListener(l -> {
-            showDetails();
-        });
+//         btnshowDetails.addActionListener(l -> {
+//            showDetails();
+//        });
     }
     public void setTableRecords(){
         DefaultTableModel dtm = (DefaultTableModel)classRoomPanel.getTblClassRooms().getModel();
@@ -78,26 +78,26 @@ public class ClassRoomController {
             row[3]= rule.getMaxGroup();
             dtm.addRow(row);
         } 
-//        this.classRoomPanel.getBtnShowDetail().addMouseListener(new MouseAdapter() {
-//        public void mouseClicked(MouseEvent e) {
-//            // selectedRow contains row selected
-//        int selectedRow = classRoomPanel.getTblClassRooms().getSelectedRow();
-//        if(selectedRow>=0){
-//              // if user selected a row then open ViewJPanel and display data of selected row
-//              String age = (String) classRoomPanel.getTblClassRooms().getValueAt(selectedRow, 0);
-//              String minAge[] = age.split("-");
-//              ClassRoom c = getClassRoom(Integer.parseInt(minAge[0]));
-//              viewJPanel = new ViewStudentJPanel(classRoomPanel.getUserProcessControlJPanel());
-//              populateTableWithStudents(c);
-//              classRoomPanel.getUserProcessControlJPanel().add("ViewStudentJPanel",viewJPanel);
-//             CardLayout layout = (CardLayout) classRoomPanel.getUserProcessControlJPanel().getLayout();
-//              layout.next(classRoomPanel.getUserProcessControlJPanel());
-//        }
-//        else {
-//            // if user didn't selected a row show message
-//            JOptionPane.showMessageDialog(null, "Please select a row from table first to view Details!","Warning",JOptionPane.WARNING_MESSAGE);
-//        }
-//      }});
+        this.classRoomPanel.getBtnshowDetails().addMouseListener(new MouseAdapter() {
+        public void mouseClicked(MouseEvent e) {
+            // selectedRow contains row selected
+        int selectedRow = classRoomPanel.getTblClassRooms().getSelectedRow();
+        if(selectedRow>=0){
+              // if user selected a row then open ViewJPanel and display data of selected row
+              String age = (String) classRoomPanel.getTblClassRooms().getValueAt(selectedRow, 0);
+              String minAge[] = age.split("-");
+              ClassRoom c = getClassRoom(Integer.parseInt(minAge[0]));
+              viewJPanel = new ViewStudentJPanel(classRoomPanel.getUserProcessControlJPanel());
+              populateTableWithStudents(c);
+              classRoomPanel.getUserProcessControlJPanel().add("ViewStudentJPanel",viewJPanel);
+             CardLayout layout = (CardLayout) classRoomPanel.getUserProcessControlJPanel().getLayout();
+              layout.next(classRoomPanel.getUserProcessControlJPanel());
+        }
+        else {
+            // if user didn't selected a row show message
+            JOptionPane.showMessageDialog(null, "Please select a row from table first to view Details!","Warning",JOptionPane.WARNING_MESSAGE);
+        }
+      }});
     }
     
     
