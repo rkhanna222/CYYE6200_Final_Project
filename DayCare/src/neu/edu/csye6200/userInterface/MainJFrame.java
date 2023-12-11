@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author moinu
+ * @author @sahilmattoo
  */
 
 public class MainJFrame extends javax.swing.JFrame {
@@ -16,10 +16,7 @@ public class MainJFrame extends javax.swing.JFrame {
    private RenewalJPanel renewalJPanel;
    private ClassRoomJPanel classRoomJPanel;
    private StateRulesJPanel StateRulesjPanel;
-
-
-
-
+   private StatsJPanel statsJPanel;
 
 
     public MainJFrame() {
@@ -45,6 +42,7 @@ public class MainJFrame extends javax.swing.JFrame {
         btnStateRules = new javax.swing.JButton();
         btnRenewal = new javax.swing.JButton();
         logoutBtn = new javax.swing.JButton();
+        btnRenewal1 = new javax.swing.JButton();
         userProcessControllerJPanel = new javax.swing.JPanel();
 
         jLabel1.setText("jLabel1");
@@ -147,20 +145,33 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnRenewal1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnRenewal1.setText("Statistics");
+        btnRenewal1.setToolTipText("Student");
+        btnRenewal1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnRenewal1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnRenewal1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnRenewal1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRenewal1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(adminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+            .addComponent(adminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
             .addComponent(teacherBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
             .addComponent(studentBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(mainHeadingLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnStateRules, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnRenewal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(logoutBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
+            .addComponent(btnRenewal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,9 +188,11 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnStateRules, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRenewal, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnRenewal1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(logoutBtn)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addGap(51, 51, 51))
         );
 
         splitPane.setLeftComponent(controlJPanel);
@@ -241,6 +254,11 @@ public class MainJFrame extends javax.swing.JFrame {
     private void teacherBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_teacherBtnActionPerformed
+
+    private void btnRenewal1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRenewal1ActionPerformed
+        // TODO add your handling code here:
+        statsJPanel();
+    }//GEN-LAST:event_btnRenewal1ActionPerformed
     public void classRoomJPanel(){
         classRoomJPanel = new ClassRoomJPanel(userProcessControllerJPanel);
         userProcessControllerJPanel.add("classRoomJPanel",classRoomJPanel);
@@ -272,6 +290,12 @@ public class MainJFrame extends javax.swing.JFrame {
         CardLayout layout = (CardLayout) userProcessControllerJPanel.getLayout();
         layout.next(userProcessControllerJPanel);
    }
+   public void statsJPanel(){
+        statsJPanel = new StatsJPanel(userProcessControllerJPanel);
+        userProcessControllerJPanel.add("statsJPanel",statsJPanel);
+        CardLayout layout = (CardLayout) userProcessControllerJPanel.getLayout();
+        layout.next(userProcessControllerJPanel);
+    }
     public JButton getAdminBtn() {
         return adminBtn;
     }
@@ -344,6 +368,7 @@ public class MainJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton adminBtn;
     private javax.swing.JButton btnRenewal;
+    private javax.swing.JButton btnRenewal1;
     private javax.swing.JButton btnStateRules;
     private javax.swing.JPanel containerJPanel;
     private javax.swing.JPanel controlJPanel;

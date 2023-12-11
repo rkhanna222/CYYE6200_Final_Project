@@ -18,7 +18,7 @@ import neu.edu.csye6200.model.Student;
 
 /**
  *
- * @author moinu
+ * @author @sahilmattoo
  */
 public class ViewStudentJPanel extends javax.swing.JPanel {
     private JPanel  userProcessJPanel;
