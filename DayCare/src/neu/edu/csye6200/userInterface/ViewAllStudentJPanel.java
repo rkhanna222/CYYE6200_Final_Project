@@ -144,6 +144,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         sortByGPAButton = new javax.swing.JButton();
         sortByIdButton = new javax.swing.JButton();
         sortByNameButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -167,6 +168,8 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        setLayout(null);
+
         studentsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -180,8 +183,13 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(studentsTable);
 
+        jLayeredPane1.add(jScrollPane1);
+        jScrollPane1.setBounds(60, 120, 879, 316);
+
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setText("All Students");
+        jLayeredPane1.add(jLabel1);
+        jLabel1.setBounds(410, 70, 140, 30);
 
         sortByGPAButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByGPAButton.setText("Sort By GPA");
@@ -190,6 +198,8 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
                 sortByGPAButtonActionPerformed(evt);
             }
         });
+        jLayeredPane1.add(sortByGPAButton);
+        sortByGPAButton.setBounds(781, 448, 123, 29);
 
         sortByIdButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByIdButton.setText("Sort By ID");
@@ -198,6 +208,8 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
                 sortByIdButtonActionPerformed(evt);
             }
         });
+        jLayeredPane1.add(sortByIdButton);
+        sortByIdButton.setBounds(163, 448, 109, 29);
 
         sortByNameButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByNameButton.setText("Sort By Name");
@@ -206,59 +218,15 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
                 sortByNameButtonActionPerformed(evt);
             }
         });
+        jLayeredPane1.add(sortByNameButton);
+        sortByNameButton.setBounds(452, 448, 134, 29);
 
-        jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(sortByGPAButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(sortByIdButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(sortByNameButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/s12.png"))); // NOI18N
+        jLayeredPane1.add(jLabel2);
+        jLabel2.setBounds(0, 0, 990, 620);
 
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel1))
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addComponent(sortByIdButton)
-                        .addGap(69, 69, 69)
-                        .addComponent(sortByNameButton)
-                        .addGap(72, 72, 72)
-                        .addComponent(sortByGPAButton))
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(69, Short.MAX_VALUE))
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1)
-                .addGap(24, 24, 24)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sortByIdButton)
-                    .addComponent(sortByNameButton)
-                    .addComponent(sortByGPAButton))
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
+        add(jLayeredPane1);
+        jLayeredPane1.setBounds(0, 0, 980, 640);
     }// </editor-fold>//GEN-END:initComponents
 
     private void sortByGPAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortByGPAButtonActionPerformed
@@ -281,6 +249,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton sortByGPAButton;

@@ -115,8 +115,10 @@ public class TeacherJPanel extends javax.swing.JPanel {
         btnUpdateTeacher = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
         tblTeacherRecords.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tblTeacherRecords.setModel(new javax.swing.table.DefaultTableModel(
@@ -137,6 +139,9 @@ public class TeacherJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblTeacherRecords);
 
+        add(jScrollPane1);
+        jScrollPane1.setBounds(90, 190, 600, 153);
+
         btnAddTeacher.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnAddTeacher.setText("Add New Teacher");
         btnAddTeacher.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +149,8 @@ public class TeacherJPanel extends javax.swing.JPanel {
                 btnAddTeacherActionPerformed(evt);
             }
         });
+        add(btnAddTeacher);
+        btnAddTeacher.setBounds(310, 370, 164, 32);
 
         btnUpdateTeacher.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnUpdateTeacher.setText("Update Selected Teacher");
@@ -152,45 +159,22 @@ public class TeacherJPanel extends javax.swing.JPanel {
                 btnUpdateTeacherActionPerformed(evt);
             }
         });
+        add(btnUpdateTeacher);
+        btnUpdateTeacher.setBounds(290, 420, 213, 32);
 
         btnDelete.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnDelete.setText("Delete Selected Teacher");
+        add(btnDelete);
+        btnDelete.setBounds(290, 470, 205, 32);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Teacher Details");
+        add(jLabel1);
+        jLabel1.setBounds(310, 30, 200, 30);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnAddTeacher)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnUpdateTeacher)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(127, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAddTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUpdateTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(185, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/teacher.jpg"))); // NOI18N
+        add(jLabel2);
+        jLabel2.setBounds(-10, 0, 950, 660);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateTeacherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateTeacherActionPerformed
@@ -207,6 +191,7 @@ public class TeacherJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnUpdateTeacher;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblTeacherRecords;
     // End of variables declaration//GEN-END:variables
