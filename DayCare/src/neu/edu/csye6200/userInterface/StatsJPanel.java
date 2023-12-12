@@ -31,6 +31,7 @@ import org.jfree.data.general.DefaultPieDataset;
 /**
  *
  * @author sahilmattoo
+ * @author Parag khankari
  */
 public class StatsJPanel extends javax.swing.JPanel {
 
@@ -83,7 +84,7 @@ public class StatsJPanel extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(150, 270, 220, 60);
+        jButton1.setBounds(90, 270, 220, 60);
 
         jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jButton2.setText("Student Immunization Graph");
@@ -93,7 +94,7 @@ public class StatsJPanel extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(440, 270, 240, 60);
+        jButton2.setBounds(90, 330, 240, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/stats1.png"))); // NOI18N
         add(jLabel1);
