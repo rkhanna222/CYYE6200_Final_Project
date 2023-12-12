@@ -87,7 +87,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         txtFieldPassword.setBounds(550, 420, 195, 18);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/dayCare.jpeg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/dayy.jpg"))); // NOI18N
         jLabel4.setOpaque(true);
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 1230, 870);
