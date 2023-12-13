@@ -36,14 +36,14 @@ public class MainJFrame extends javax.swing.JFrame {
         containerJPanel = new javax.swing.JPanel();
         splitPane = new javax.swing.JSplitPane();
         controlJPanel = new javax.swing.JPanel();
-        mainHeadingLabel = new javax.swing.JLabel();
         adminBtn = new javax.swing.JButton();
         teacherBtn = new javax.swing.JButton();
         studentBtn1 = new javax.swing.JButton();
         btnStateRules = new javax.swing.JButton();
         btnRenewal = new javax.swing.JButton();
-        logoutBtn = new javax.swing.JButton();
         btnRenewal1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        logOutBtn = new javax.swing.JButton();
         userProcessControllerJPanel = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -74,20 +74,15 @@ public class MainJFrame extends javax.swing.JFrame {
         splitPane.setDividerSize(0);
         splitPane.setMinimumSize(new java.awt.Dimension(800, 25));
 
-        controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        controlJPanel.setBackground(new java.awt.Color(0, 0, 102));
+        controlJPanel.setForeground(new java.awt.Color(0, 0, 102));
 
-        mainHeadingLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        mainHeadingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        mainHeadingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/iconfinder_menu-alt_134216.png"))); // NOI18N
-        mainHeadingLabel.setText("Day Care");
-        mainHeadingLabel.setToolTipText("Day Care");
-
-        adminBtn.setBackground(new java.awt.Color(102, 153, 255));
-        adminBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        adminBtn.setForeground(new java.awt.Color(0, 0, 153));
+        adminBtn.setBackground(new java.awt.Color(255, 255, 255));
+        adminBtn.setFont(new java.awt.Font("Al Bayan", 0, 18)); // NOI18N
+        adminBtn.setForeground(new java.awt.Color(0, 0, 102));
         adminBtn.setText("ADMIN");
         adminBtn.setToolTipText("Admin");
-        adminBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        adminBtn.setBorder(null);
         adminBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         adminBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         adminBtn.setNextFocusableComponent(adminBtn);
@@ -98,9 +93,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        teacherBtn.setBackground(new java.awt.Color(102, 153, 255));
-        teacherBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        teacherBtn.setForeground(new java.awt.Color(0, 0, 153));
+        teacherBtn.setBackground(new java.awt.Color(255, 255, 255));
+        teacherBtn.setFont(new java.awt.Font("Al Bayan", 0, 18)); // NOI18N
+        teacherBtn.setForeground(new java.awt.Color(0, 0, 102));
         teacherBtn.setText("TEACHER");
         teacherBtn.setToolTipText("teacher");
         teacherBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -113,9 +108,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        studentBtn1.setBackground(new java.awt.Color(102, 153, 255));
-        studentBtn1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        studentBtn1.setForeground(new java.awt.Color(0, 0, 153));
+        studentBtn1.setBackground(new java.awt.Color(255, 255, 255));
+        studentBtn1.setFont(new java.awt.Font("Al Bayan", 0, 18)); // NOI18N
+        studentBtn1.setForeground(new java.awt.Color(0, 0, 102));
         studentBtn1.setText("STUDENT");
         studentBtn1.setToolTipText("Student");
         studentBtn1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -128,9 +123,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnStateRules.setBackground(new java.awt.Color(102, 153, 255));
-        btnStateRules.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnStateRules.setForeground(new java.awt.Color(0, 0, 153));
+        btnStateRules.setBackground(new java.awt.Color(255, 255, 255));
+        btnStateRules.setFont(new java.awt.Font("Al Bayan", 0, 18)); // NOI18N
+        btnStateRules.setForeground(new java.awt.Color(0, 0, 102));
         btnStateRules.setText("STATE RULES");
         btnStateRules.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         btnStateRules.setOpaque(true);
@@ -140,9 +135,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnRenewal.setBackground(new java.awt.Color(102, 153, 255));
-        btnRenewal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnRenewal.setForeground(new java.awt.Color(0, 0, 153));
+        btnRenewal.setBackground(new java.awt.Color(255, 255, 255));
+        btnRenewal.setFont(new java.awt.Font("Al Bayan", 0, 18)); // NOI18N
+        btnRenewal.setForeground(new java.awt.Color(0, 0, 102));
         btnRenewal.setText("RENEWAL ");
         btnRenewal.setToolTipText("Student");
         btnRenewal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -155,18 +150,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        logoutBtn.setBackground(new java.awt.Color(255, 102, 102));
-        logoutBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
-        logoutBtn.setText("Logout");
-        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logoutBtnActionPerformed(evt);
-            }
-        });
-
-        btnRenewal1.setBackground(new java.awt.Color(102, 153, 255));
+        btnRenewal1.setBackground(new java.awt.Color(255, 255, 255));
         btnRenewal1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnRenewal1.setForeground(new java.awt.Color(0, 0, 153));
+        btnRenewal1.setForeground(new java.awt.Color(0, 0, 102));
         btnRenewal1.setText("STATISTICS");
         btnRenewal1.setToolTipText("Student");
         btnRenewal1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -179,46 +165,68 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Al Bayan", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("DAYCARE");
+
+        logOutBtn.setBackground(new java.awt.Color(255, 255, 255));
+        logOutBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        logOutBtn.setForeground(new java.awt.Color(0, 0, 102));
+        logOutBtn.setText("LOGOUT");
+        logOutBtn.setToolTipText("Student");
+        logOutBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        logOutBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        logOutBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        logOutBtn.setOpaque(true);
+        logOutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logOutBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainHeadingLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(adminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                    .addComponent(teacherBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(adminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(teacherBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(studentBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnStateRules, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnRenewal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnRenewal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(logoutBtn)
-                .addGap(35, 35, 35))
+            .addGroup(controlJPanelLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel5)
+                .addContainerGap(15, Short.MAX_VALUE))
+            .addGroup(controlJPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(logOutBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(mainHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(183, 183, 183)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel5)
+                .addGap(210, 210, 210)
                 .addComponent(adminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(studentBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(teacherBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnStateRules, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
                 .addComponent(btnRenewal, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnRenewal1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
-                .addComponent(logoutBtn)
-                .addGap(89, 89, 89))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
+                .addComponent(logOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(88, 88, 88))
         );
 
         splitPane.setLeftComponent(controlJPanel);
@@ -269,15 +277,6 @@ public class MainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRenewalActionPerformed
 
-    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
-        // TODO add your handling code here:
-        System.out.print("Logout");
-        JFrame o = new LoginJFrame();
-        o.setVisible(true);
-        dispose();
-        
-    }//GEN-LAST:event_logoutBtnActionPerformed
-
     private void teacherBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_teacherBtnActionPerformed
@@ -286,6 +285,14 @@ public class MainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         statsJPanel();
     }//GEN-LAST:event_btnRenewal1ActionPerformed
+
+    private void logOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutBtnActionPerformed
+        // TODO add your handling code here:
+        System.out.print("Logout");
+        JFrame o = new LoginJFrame();
+        o.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_logOutBtnActionPerformed
     public void classRoomJPanel(){
         classRoomJPanel = new ClassRoomJPanel(userProcessControllerJPanel);
         userProcessControllerJPanel.add("classRoomJPanel",classRoomJPanel);
@@ -403,9 +410,9 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton logoutBtn;
-    private javax.swing.JLabel mainHeadingLabel;
+    private javax.swing.JButton logOutBtn;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JButton studentBtn1;
     private javax.swing.JButton teacherBtn;
