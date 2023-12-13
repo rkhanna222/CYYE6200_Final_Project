@@ -15,7 +15,7 @@ public class App {
             public void run() {
                 LoginJFrame view = new LoginJFrame();
                    // Alternatively, you can use setPreferredSize and pack
-                view.setPreferredSize(new java.awt.Dimension(800, 600));
+                view.setPreferredSize(new java.awt.Dimension(1240, 830));
                 view.pack();
                 view.setVisible(true);
                 //MainController controller = new MainController(view);

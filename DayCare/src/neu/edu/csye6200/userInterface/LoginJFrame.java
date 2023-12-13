@@ -27,6 +27,7 @@ public class LoginJFrame extends javax.swing.JFrame {
      */
     public LoginJFrame() {
         initComponents();
+        this.setSize(1240, 830);
     }
 
     /**
@@ -51,32 +52,39 @@ public class LoginJFrame extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(102, 102, 102));
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/iconmonstr-user-29-240.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(370, 330, 160, 130);
+        jLabel1.setBounds(390, 260, 220, 180);
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
+        jButton1.setBackground(new java.awt.Color(51, 102, 255));
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 102, 102));
-        jButton1.setText("SignIn");
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("SIGN IN");
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setOpaque(true);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(570, 600, 99, 31);
+        jButton1.setBounds(500, 520, 260, 60);
 
         txtFieldUsername.setBackground(new java.awt.Color(204, 204, 204));
+        txtFieldUsername.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         txtFieldUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtFieldUsername.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtFieldUsername.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         getContentPane().add(txtFieldUsername);
-        txtFieldUsername.setBounds(550, 370, 195, 18);
+        txtFieldUsername.setBounds(640, 290, 210, 50);
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(80, 450, 71, 18);
 
         txtFieldPassword.setBackground(new java.awt.Color(204, 204, 204));
+        txtFieldPassword.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         txtFieldPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtFieldPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,10 +92,10 @@ public class LoginJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtFieldPassword);
-        txtFieldPassword.setBounds(550, 420, 195, 18);
+        txtFieldPassword.setBounds(640, 370, 210, 50);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/dayy.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/login_background_dark.jpg"))); // NOI18N
         jLabel4.setOpaque(true);
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 1230, 870);
