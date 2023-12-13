@@ -18,7 +18,7 @@ import neu.edu.csye6200.util.FileIO;
 
 /**
  *
- * @author moinu
+ * @author Sarvesh
  */
 public class LoginJFrame extends javax.swing.JFrame {
 
@@ -57,7 +57,7 @@ public class LoginJFrame extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 102, 102));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("SignIn");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +87,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         txtFieldPassword.setBounds(550, 420, 195, 18);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/dayy.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/daycareeducation.jpg"))); // NOI18N
         jLabel4.setOpaque(true);
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 1230, 870);
