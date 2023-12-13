@@ -65,7 +65,7 @@ public class LoginJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(570, 600, 99, 31);
+        jButton1.setBounds(560, 500, 99, 31);
 
         txtFieldUsername.setBackground(new java.awt.Color(204, 204, 204));
         txtFieldUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
