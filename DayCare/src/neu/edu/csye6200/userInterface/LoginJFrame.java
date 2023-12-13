@@ -18,7 +18,7 @@ import neu.edu.csye6200.util.FileIO;
 
 /**
  *
- * @author moinu
+ * @author sahilmattoo
  */
 public class LoginJFrame extends javax.swing.JFrame {
 
