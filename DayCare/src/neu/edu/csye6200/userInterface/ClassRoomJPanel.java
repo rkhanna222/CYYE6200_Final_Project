@@ -12,7 +12,7 @@ import javax.swing.JToggleButton;
 
 /**
  *
- * @author moinu
+ * @author @sahilmattoo
  */
 public class ClassRoomJPanel extends javax.swing.JPanel {
 
@@ -53,14 +53,17 @@ public class ClassRoomJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel1.setFont(new java.awt.Font("Al Bayan", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ClassRooms");
+        jLabel1.setText("CLASSROOMS");
         add(jLabel1);
-        jLabel1.setBounds(380, 90, 240, 34);
+        jLabel1.setBounds(330, 40, 390, 70);
 
-        tblClassRooms.setBackground(new java.awt.Color(204, 255, 255));
+        tblClassRooms.setBackground(new java.awt.Color(153, 153, 153));
+        tblClassRooms.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.lightGray, new java.awt.Color(102, 102, 102)));
+        tblClassRooms.setFont(new java.awt.Font("Hiragino Maru Gothic ProN", 0, 14)); // NOI18N
+        tblClassRooms.setForeground(new java.awt.Color(255, 255, 255));
         tblClassRooms.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -77,16 +80,26 @@ public class ClassRoomJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        tblClassRooms.setToolTipText("");
+        tblClassRooms.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        tblClassRooms.setRowHeight(25);
+        tblClassRooms.setSelectionBackground(new java.awt.Color(0, 0, 102));
         jScrollPane1.setViewportView(tblClassRooms);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(210, 160, 571, 167);
+        jScrollPane1.setBounds(110, 140, 820, 340);
 
+        btnUploadCSV.setBackground(new java.awt.Color(255, 255, 255));
+        btnUploadCSV.setFont(new java.awt.Font("Al Bayan", 1, 14)); // NOI18N
+        btnUploadCSV.setForeground(new java.awt.Color(255, 255, 255));
         btnUploadCSV.setText("Upload Student Roster");
         btnUploadCSV.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         add(btnUploadCSV);
-        btnUploadCSV.setBounds(420, 460, 157, 39);
+        btnUploadCSV.setBounds(760, 490, 170, 39);
 
+        btnshowDetails.setBackground(new java.awt.Color(255, 255, 255));
+        btnshowDetails.setFont(new java.awt.Font("Al Bayan", 1, 14)); // NOI18N
+        btnshowDetails.setForeground(new java.awt.Color(255, 255, 255));
         btnshowDetails.setText("Show Details");
         btnshowDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnshowDetails.addActionListener(new java.awt.event.ActionListener() {
@@ -95,11 +108,11 @@ public class ClassRoomJPanel extends javax.swing.JPanel {
             }
         });
         add(btnshowDetails);
-        btnshowDetails.setBounds(440, 390, 110, 40);
+        btnshowDetails.setBounds(110, 490, 110, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/classroom.jpeg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/aaron-burden-1zR3WNSTnvY-unsplash (1).jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 1020, 740);
+        jLabel2.setBounds(0, 0, 1230, 850);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnshowDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnshowDetailsActionPerformed
