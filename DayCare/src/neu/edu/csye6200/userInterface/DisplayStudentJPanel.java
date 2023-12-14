@@ -15,7 +15,7 @@ import neu.edu.csye6200.model.Teacher;
 
 /**
  *
- * @author sahilmattoo
+ * @author raghavkhanna
  */
 public class DisplayStudentJPanel extends javax.swing.JPanel {
 
@@ -50,8 +50,10 @@ public class DisplayStudentJPanel extends javax.swing.JPanel {
         jButtonUpdateGPA = new javax.swing.JButton();
         jTextFieldUpdateGPA = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
         jTableDisplayStudent.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTableDisplayStudent.setModel(new javax.swing.table.DefaultTableModel(
@@ -64,6 +66,9 @@ public class DisplayStudentJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTableDisplayStudent);
 
+        add(jScrollPane1);
+        jScrollPane1.setBounds(17, 6, 490, 234);
+
         jButtonUpdateGPA.setText("Update");
         jButtonUpdateGPA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButtonUpdateGPA.addActionListener(new java.awt.event.ActionListener() {
@@ -71,40 +76,18 @@ public class DisplayStudentJPanel extends javax.swing.JPanel {
                 jButtonUpdateGPAActionPerformed(evt);
             }
         });
+        add(jButtonUpdateGPA);
+        jButtonUpdateGPA.setBounds(42, 262, 46, 18);
+        add(jTextFieldUpdateGPA);
+        jTextFieldUpdateGPA.setBounds(228, 258, 79, 26);
 
         jLabel1.setText("GPA");
+        add(jLabel1);
+        jLabel1.setBounds(183, 258, 39, 26);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jButtonUpdateGPA)
-                        .addGap(95, 95, 95)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldUpdateGPA, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonUpdateGPA)
-                        .addComponent(jTextFieldUpdateGPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(33, 33, 33))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ss.jpeg"))); // NOI18N
+        add(jLabel2);
+        jLabel2.setBounds(0, 0, 550, 320);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonUpdateGPAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateGPAActionPerformed
@@ -136,6 +119,7 @@ public class DisplayStudentJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonUpdateGPA;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableDisplayStudent;
     private javax.swing.JTextField jTextFieldUpdateGPA;

@@ -13,7 +13,7 @@ import neu.edu.csye6200.model.Teacher;
 
 /**
  *
- * @author @sahilmattoo
+ * @author raghavkhanna
  */
 public class StudentJFrame extends javax.swing.JFrame {
 
@@ -66,24 +66,49 @@ public class StudentJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setLayout(null);
 
         jLabel1.setText("First Name:");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(47, 39, 72, 16);
+        getContentPane().add(txtFieldFname);
+        txtFieldFname.setBounds(151, 34, 130, 26);
 
         jLabel2.setText("Last Name:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(49, 77, 70, 16);
 
         txtFieldLname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFieldLnameActionPerformed(evt);
             }
         });
+        getContentPane().add(txtFieldLname);
+        txtFieldLname.setBounds(151, 72, 130, 26);
 
         jLabel3.setText("Age:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(47, 121, 72, 16);
+        getContentPane().add(txtFieldAge);
+        txtFieldAge.setBounds(151, 116, 130, 26);
 
         jLabel4.setText("EmailId:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(47, 165, 50, 16);
+        getContentPane().add(txtFieldEmailId);
+        txtFieldEmailId.setBounds(151, 160, 130, 26);
 
         jLabel5.setText("GPA:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(47, 209, 29, 16);
+        getContentPane().add(txtFieldGpa);
+        txtFieldGpa.setBounds(151, 204, 130, 26);
 
         jLabel6.setText("Teacher Name:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(47, 247, 93, 16);
+        getContentPane().add(txtFieldTeacherName);
+        txtFieldTeacherName.setBounds(152, 242, 130, 26);
 
         jLabel7.setText("Rating:");
 
@@ -94,6 +119,8 @@ public class StudentJFrame extends javax.swing.JFrame {
                 btnDoneActionPerformed(evt);
             }
         });
+        getContentPane().add(btnDone);
+        btnDone.setBounds(176, 324, 77, 29);
 
         jBtnBack.setBackground(new java.awt.Color(255, 255, 255));
         jBtnBack.setForeground(new java.awt.Color(0, 0, 102));
@@ -103,6 +130,8 @@ public class StudentJFrame extends javax.swing.JFrame {
                 jBtnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(jBtnBack);
+        jBtnBack.setBounds(360, 330, 88, 29);
 
         jLabel8.setFont(new java.awt.Font("Al Bayan", 1, 48)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 102));
