@@ -75,6 +75,7 @@ public class StateRulesJPanel extends javax.swing.JPanel {
 
         jTable3.setBackground(new java.awt.Color(153, 153, 153));
         jTable3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTable3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jTable3.setForeground(new java.awt.Color(255, 255, 255));
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

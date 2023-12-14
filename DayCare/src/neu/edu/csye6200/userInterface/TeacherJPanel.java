@@ -12,7 +12,7 @@ import javax.swing.JTable;
 
 /**
  *
- * @author moinu
+ * @author sahilmattoo
  */
 public class TeacherJPanel extends javax.swing.JPanel {
 
@@ -109,6 +109,7 @@ public class TeacherJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollBar1 = new javax.swing.JScrollBar();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblTeacherRecords = new javax.swing.JTable();
         btnAddTeacher = new javax.swing.JButton();
@@ -140,7 +141,7 @@ public class TeacherJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblTeacherRecords);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(90, 190, 600, 153);
+        jScrollPane1.setBounds(140, 110, 750, 300);
 
         btnAddTeacher.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnAddTeacher.setText("Add New Teacher");
@@ -150,7 +151,7 @@ public class TeacherJPanel extends javax.swing.JPanel {
             }
         });
         add(btnAddTeacher);
-        btnAddTeacher.setBounds(310, 370, 164, 32);
+        btnAddTeacher.setBounds(140, 470, 170, 60);
 
         btnUpdateTeacher.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnUpdateTeacher.setText("Update Selected Teacher");
@@ -160,22 +161,23 @@ public class TeacherJPanel extends javax.swing.JPanel {
             }
         });
         add(btnUpdateTeacher);
-        btnUpdateTeacher.setBounds(290, 420, 213, 32);
+        btnUpdateTeacher.setBounds(380, 470, 230, 60);
 
         btnDelete.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnDelete.setText("Delete Selected Teacher");
         add(btnDelete);
-        btnDelete.setBounds(290, 470, 205, 32);
+        btnDelete.setBounds(670, 470, 205, 60);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Teacher Details");
         add(jLabel1);
-        jLabel1.setBounds(310, 30, 200, 30);
+        jLabel1.setBounds(300, 20, 430, 58);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/teacher.jpg"))); // NOI18N
-        jLabel2.setSize(950, 660);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/tea.jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(-10, 0, 950, 660);
+        jLabel2.setBounds(-410, -90, 1910, 860);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateTeacherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateTeacherActionPerformed
@@ -193,6 +195,7 @@ public class TeacherJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnUpdateTeacher;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblTeacherRecords;
     // End of variables declaration//GEN-END:variables
