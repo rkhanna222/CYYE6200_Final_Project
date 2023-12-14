@@ -31,7 +31,7 @@ import org.jfree.data.general.DefaultPieDataset;
 /**
  *
  * @author sahilmattoo
- * @author Parag khankari
+ * 
  */
 public class StatsJPanel extends javax.swing.JPanel {
 
@@ -61,6 +61,7 @@ public class StatsJPanel extends javax.swing.JPanel {
         jFrame1 = new javax.swing.JFrame();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
@@ -76,7 +77,7 @@ public class StatsJPanel extends javax.swing.JPanel {
 
         setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jButton1.setText("Student Enrollment Graph");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,9 +85,9 @@ public class StatsJPanel extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(90, 270, 220, 60);
+        jButton1.setBounds(330, 200, 420, 150);
 
-        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jButton2.setText("Student Immunization Graph");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +95,13 @@ public class StatsJPanel extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(90, 330, 240, 60);
+        jButton2.setBounds(330, 410, 420, 150);
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel2.setText("Statistics");
+        add(jLabel2);
+        jLabel2.setBounds(400, 20, 240, 80);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/stats1.png"))); // NOI18N
         add(jLabel1);
@@ -117,5 +124,6 @@ public class StatsJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
