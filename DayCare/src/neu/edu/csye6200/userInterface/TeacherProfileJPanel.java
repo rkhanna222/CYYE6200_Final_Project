@@ -10,7 +10,7 @@ import neu.edu.csye6200.model.Teacher;
 
 /**
  *
- * @author moinu
+ * @author raghavkhanna
  */
 public class TeacherProfileJPanel extends javax.swing.JPanel {
 
@@ -53,20 +53,34 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
         jTextFieldCredit = new javax.swing.JTextField();
         jTextFieldEmail = new javax.swing.JTextField();
         jTextFieldClassAssigned = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
         jLabel1.setText("Last Name :");
+        add(jLabel1);
+        jLabel1.setBounds(76, 64, 104, 16);
 
         jLabel2.setText("First Name : ");
+        add(jLabel2);
+        jLabel2.setBounds(76, 32, 80, 16);
 
         jLabel3.setText("Teacher ID :  ");
+        add(jLabel3);
+        jLabel3.setBounds(76, 101, 104, 16);
 
         jLabel4.setText("Credit : ");
+        add(jLabel4);
+        jLabel4.setBounds(76, 133, 104, 16);
 
         jLabel5.setText("Email : ");
+        add(jLabel5);
+        jLabel5.setBounds(76, 166, 104, 16);
 
         jLabel6.setText("Class Assigned :");
+        add(jLabel6);
+        jLabel6.setBounds(76, 204, 104, 16);
 
         jTextFieldFirstName.setEditable(false);
         jTextFieldFirstName.addActionListener(new java.awt.event.ActionListener() {
@@ -74,6 +88,8 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
                 jTextFieldFirstNameActionPerformed(evt);
             }
         });
+        add(jTextFieldFirstName);
+        jTextFieldFirstName.setBounds(192, 27, 109, 26);
 
         jTextFieldLastName.setEditable(false);
         jTextFieldLastName.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +97,8 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
                 jTextFieldLastNameActionPerformed(evt);
             }
         });
+        add(jTextFieldLastName);
+        jTextFieldLastName.setBounds(192, 59, 109, 26);
 
         jTextFieldTeacherID.setEditable(false);
         jTextFieldTeacherID.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +106,8 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
                 jTextFieldTeacherIDActionPerformed(evt);
             }
         });
+        add(jTextFieldTeacherID);
+        jTextFieldTeacherID.setBounds(192, 91, 109, 26);
 
         jTextFieldCredit.setEditable(false);
         jTextFieldCredit.addActionListener(new java.awt.event.ActionListener() {
@@ -95,6 +115,8 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
                 jTextFieldCreditActionPerformed(evt);
             }
         });
+        add(jTextFieldCredit);
+        jTextFieldCredit.setBounds(192, 123, 109, 26);
 
         jTextFieldEmail.setEditable(false);
         jTextFieldEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +124,8 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
                 jTextFieldEmailActionPerformed(evt);
             }
         });
+        add(jTextFieldEmail);
+        jTextFieldEmail.setBounds(192, 161, 109, 26);
 
         jTextFieldClassAssigned.setEditable(false);
         jTextFieldClassAssigned.addActionListener(new java.awt.event.ActionListener() {
@@ -109,60 +133,12 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
                 jTextFieldClassAssignedActionPerformed(evt);
             }
         });
+        add(jTextFieldClassAssigned);
+        jTextFieldClassAssigned.setBounds(192, 199, 109, 26);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldClassAssigned, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldCredit, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldTeacherID, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(120, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextFieldFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextFieldLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextFieldTeacherID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextFieldCredit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextFieldClassAssigned, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(99, Short.MAX_VALUE))
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/teacher.jpg"))); // NOI18N
+        add(jLabel7);
+        jLabel7.setBounds(0, 0, 620, 430);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFirstNameActionPerformed
@@ -248,6 +224,7 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextFieldClassAssigned;
     private javax.swing.JTextField jTextFieldCredit;
     private javax.swing.JTextField jTextFieldEmail;

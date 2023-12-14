@@ -11,7 +11,7 @@ import neu.edu.csye6200.model.Teacher;
 
 /**
  *
- * @author moinu
+ * @author raghavkhanna
  */
 public class TeacherJFrame extends javax.swing.JFrame {
 
@@ -45,6 +45,7 @@ public class TeacherJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -101,23 +102,14 @@ public class TeacherJFrame extends javax.swing.JFrame {
         userProcessContainer.setLayout(new java.awt.CardLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/te1.jpeg"))); // NOI18N
         jLabel1.setText("Welcome !!");
         userProcessContainer.add(jLabel1, "card2");
 
         jSplitPane1.setRightComponent(userProcessContainer);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
-        );
+        getContentPane().add(jSplitPane1);
+        jSplitPane1.setBounds(0, 0, 740, 1084);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

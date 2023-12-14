@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author moinu
+ * @author raghavkhanna
  */
 public class UpdateTeacherJPanel extends javax.swing.JPanel {
 
@@ -40,23 +40,41 @@ public class UpdateTeacherJPanel extends javax.swing.JPanel {
         textFieldClassRoomAssigned = new javax.swing.JTextField();
         textFieldTeacherId = new javax.swing.JTextField();
         btnUpdate = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Update Teacher");
+        add(jLabel1);
+        jLabel1.setBounds(6, 34, 624, 23);
 
         jLabel2.setText("First Name");
+        add(jLabel2);
+        jLabel2.setBounds(133, 91, 140, 16);
 
         jLabel3.setText("Last Name:");
+        add(jLabel3);
+        jLabel3.setBounds(133, 123, 140, 16);
 
         jLabel4.setText("Class Room Assigned:");
+        add(jLabel4);
+        jLabel4.setBounds(133, 155, 140, 23);
 
         jLabel5.setText("Teacher Id:");
+        add(jLabel5);
+        jLabel5.setBounds(133, 187, 140, 16);
+        add(txtFieldFName);
+        txtFieldFName.setBounds(285, 91, 193, 26);
+        add(txtFieldLName);
+        txtFieldLName.setBounds(285, 123, 193, 26);
 
         textFieldClassRoomAssigned.setEditable(false);
+        add(textFieldClassRoomAssigned);
+        textFieldClassRoomAssigned.setBounds(285, 155, 193, 26);
 
         textFieldTeacherId.setEditable(false);
         textFieldTeacherId.addActionListener(new java.awt.event.ActionListener() {
@@ -64,61 +82,16 @@ public class UpdateTeacherJPanel extends javax.swing.JPanel {
                 textFieldTeacherIdActionPerformed(evt);
             }
         });
+        add(textFieldTeacherId);
+        textFieldTeacherId.setBounds(285, 187, 193, 26);
 
         btnUpdate.setText("Update");
+        add(btnUpdate);
+        btnUpdate.setBounds(285, 231, 128, 32);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtFieldFName)
-                                .addComponent(txtFieldLName, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                                .addComponent(textFieldClassRoomAssigned)
-                                .addComponent(textFieldTeacherId))
-                            .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 152, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(txtFieldFName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(txtFieldLName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldClassRoomAssigned, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textFieldTeacherId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(234, Short.MAX_VALUE))
-        );
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/teach.jpeg"))); // NOI18N
+        add(jLabel6);
+        jLabel6.setBounds(0, 0, 640, 500);
     }// </editor-fold>//GEN-END:initComponents
 
     private void textFieldTeacherIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldTeacherIdActionPerformed
@@ -173,6 +146,7 @@ public class UpdateTeacherJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField textFieldClassRoomAssigned;
     private javax.swing.JTextField textFieldTeacherId;
     private javax.swing.JTextField txtFieldFName;

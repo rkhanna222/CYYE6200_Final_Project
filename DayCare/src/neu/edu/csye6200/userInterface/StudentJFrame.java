@@ -13,7 +13,7 @@ import neu.edu.csye6200.model.Teacher;
 
 /**
  *
- * @author moinu
+ * @author raghavkhanna
  */
 public class StudentJFrame extends javax.swing.JFrame {
 
@@ -58,29 +58,59 @@ public class StudentJFrame extends javax.swing.JFrame {
         txtFieldReview = new javax.swing.JTextField();
         btnDone = new javax.swing.JButton();
         jBtnBack = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setLayout(null);
 
         jLabel1.setText("First Name:");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(47, 39, 72, 16);
+        getContentPane().add(txtFieldFname);
+        txtFieldFname.setBounds(151, 34, 130, 26);
 
         jLabel2.setText("Last Name:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(49, 77, 70, 16);
 
         txtFieldLname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFieldLnameActionPerformed(evt);
             }
         });
+        getContentPane().add(txtFieldLname);
+        txtFieldLname.setBounds(151, 72, 130, 26);
 
         jLabel3.setText("Age:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(47, 121, 72, 16);
+        getContentPane().add(txtFieldAge);
+        txtFieldAge.setBounds(151, 116, 130, 26);
 
         jLabel4.setText("EmailId:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(47, 165, 50, 16);
+        getContentPane().add(txtFieldEmailId);
+        txtFieldEmailId.setBounds(151, 160, 130, 26);
 
         jLabel5.setText("GPA:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(47, 209, 29, 16);
+        getContentPane().add(txtFieldGpa);
+        txtFieldGpa.setBounds(151, 204, 130, 26);
 
         jLabel6.setText("Teacher Name:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(47, 247, 93, 16);
+        getContentPane().add(txtFieldTeacherName);
+        txtFieldTeacherName.setBounds(152, 242, 130, 26);
 
         jLabel7.setText("Rating");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(47, 285, 88, 16);
+        getContentPane().add(txtFieldReview);
+        txtFieldReview.setBounds(147, 280, 130, 26);
 
         btnDone.setText("Done");
         btnDone.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +118,8 @@ public class StudentJFrame extends javax.swing.JFrame {
                 btnDoneActionPerformed(evt);
             }
         });
+        getContentPane().add(btnDone);
+        btnDone.setBounds(176, 324, 77, 29);
 
         jBtnBack.setText("Logout");
         jBtnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -95,88 +127,12 @@ public class StudentJFrame extends javax.swing.JFrame {
                 jBtnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(jBtnBack);
+        jBtnBack.setBounds(360, 330, 88, 29);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtFieldReview, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel6)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(txtFieldTeacherName, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(20, 20, 20)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtFieldEmailId, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txtFieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txtFieldLname, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txtFieldFname, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(txtFieldGpa, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(176, 176, 176)
-                        .addComponent(btnDone))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jBtnBack)))
-                .addContainerGap(168, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jBtnBack)
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtFieldFname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtFieldLname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtFieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtFieldEmailId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtFieldGpa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtFieldTeacherName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtFieldReview, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnDone)
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Hero_Student.png"))); // NOI18N
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(0, 0, 860, 590);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -232,6 +188,7 @@ public class StudentJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField txtFieldAge;
     private javax.swing.JTextField txtFieldEmailId;
     private javax.swing.JTextField txtFieldFname;
