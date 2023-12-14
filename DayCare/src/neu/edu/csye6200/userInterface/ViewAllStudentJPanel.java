@@ -24,10 +24,13 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
      */
     public ViewAllStudentJPanel() {
         initComponents();
+        this.setSize(1240, 900);
+        updateTotalStudentsLabel();
         populateTable();
         
     }
     public void populateTable(){
+        updateTotalStudentsLabel();
         List<Student> students=  StudentDataMangementFactory.getFactoryInstance().getObject().getDataList();
         DefaultTableModel dtm = (DefaultTableModel)studentsTable.getModel();
         dtm.setRowCount(0);
@@ -43,6 +46,16 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             dtm.addRow(row);
         } 
     }
+    
+    public void updateTotalStudentsLabel() {
+    List<Student> students = StudentDataMangementFactory.getFactoryInstance().getObject().getDataList();
+    if (students != null) {
+        totalStudentsLabel.setText("Total Students: " + students.size());
+    } else {
+        totalStudentsLabel.setText("Total Students: 0");
+    }
+}
+
     
     private void sortStudentByID(){
          DefaultTableModel model = (DefaultTableModel) studentsTable.getModel();
@@ -141,11 +154,12 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         studentsTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        totalStudentsLabel = new javax.swing.JLabel();
         sortByGPAButton = new javax.swing.JButton();
         sortByIdButton = new javax.swing.JButton();
         sortByNameButton = new javax.swing.JButton();
         btnAddStudent = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
@@ -188,11 +202,11 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         jLayeredPane1.add(jScrollPane1);
         jScrollPane1.setBounds(60, 120, 879, 316);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel1.setText("All Students");
-        jLayeredPane1.add(jLabel1);
-        jLabel1.setBounds(350, 38, 300, 90);
+        totalStudentsLabel.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        totalStudentsLabel.setForeground(new java.awt.Color(0, 0, 102));
+        totalStudentsLabel.setText("Total Students : 0");
+        jLayeredPane1.add(totalStudentsLabel);
+        totalStudentsLabel.setBounds(380, 700, 330, 90);
 
         sortByGPAButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByGPAButton.setText("Sort By GPA");
@@ -235,12 +249,18 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         jLayeredPane1.add(btnAddStudent);
         btnAddStudent.setBounds(400, 510, 220, 40);
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel3.setText("All Students");
+        jLayeredPane1.add(jLabel3);
+        jLabel3.setBounds(350, 38, 300, 90);
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/s12.png"))); // NOI18N
         jLayeredPane1.add(jLabel2);
-        jLabel2.setBounds(10, 0, 990, 620);
+        jLabel2.setBounds(10, 0, 1050, 770);
 
         add(jLayeredPane1);
-        jLayeredPane1.setBounds(0, 0, 980, 640);
+        jLayeredPane1.setBounds(0, 0, 1150, 790);
     }// </editor-fold>//GEN-END:initComponents
 
     private void sortByGPAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortByGPAButtonActionPerformed
@@ -260,6 +280,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
 
     private void btnAddStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddStudentActionPerformed
 
+        
         int selectedRowIndex = studentsTable.getSelectedRow();
     
     // Check if a row is selected
@@ -279,6 +300,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         
         // Remove the row from the table model
         model.removeRow(selectedRowIndex);
+        updateTotalStudentsLabel();
     } else {
         // No row selected to delete
         JOptionPane.showMessageDialog(null, "Please select a student to delete");
@@ -290,13 +312,14 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAddStudent;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton sortByGPAButton;
     private javax.swing.JButton sortByIdButton;
     private javax.swing.JButton sortByNameButton;
     private javax.swing.JTable studentsTable;
+    private javax.swing.JLabel totalStudentsLabel;
     // End of variables declaration//GEN-END:variables
 }

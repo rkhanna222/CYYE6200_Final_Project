@@ -9,7 +9,6 @@ Emma,Garcia,07/12/0023,3003,15,Carlos Garcia,Maria Garcia,321 Cedar Ln,789012345
 Oliver,Martinez,07/12/0023,3004,12,Juan Martinez,Ana Martinez,210 Oak Terrace,8901234567,3.7,oliver.martinez@example.com,oliverMpass
 Ava,White,07/12/0023,3005,16,Thomas White,Jennifer White,568 Pine Cir,9012345678,4.0,ava.white@example.com,avaWpass
 Mia,Harris,08/12/0023,3006,15,Richard Harris,Linda Harris,112 Maple Ave,9123456789,3.5,mia.harris@example.com,miaHpass
-Jacob,Thompson,08/12/0023,3007,14,Kevin Thompson,Melissa Thompson,847 Birch St,1234567890,3.4,jacob.thompson@example.com,jacobT123
 Sophie,Wilson,08/12/0023,3008,13,Steven Wilson,Emily Wilson,429 Elm Dr,2345678901,3.9,sophie.wilson@example.com,sophieWpass
 Aiden,Moore,08/12/0023,3009,12,George Moore,Diane Moore,305 Cedar Rd,3456789012,3.8,aiden.moore@example.com,aidenMpass
 Luna,Taylor,08/12/0023,3010,14,James Taylor,Barbara Taylor,233 Oak Blvd,4567890123,3.7,luna.taylor@example.com,lunaTpass
@@ -49,24 +48,8 @@ FirstName37,LastName37,14/11/2020,5453,3,Father_LastName37,Mother_LastName37,162
 FirstName50,LastName50,14/10/2019,2162,4,Father_LastName50,Mother_LastName50,973 Pine St,4609919581,3.7,firstname50.lastname50@example.com,flastname50pass
 FirstName53,LastName53,14/07/2019,5925,4,Father_LastName53,Mother_LastName53,820 Oak St,2328125067,3.6,firstname53.lastname53@example.com,flastname53pass
 FirstName55,LastName55,14/05/2019,8617,4,Father_LastName55,Mother_LastName55,166 Maple St,2336351297,3.6,firstname55.lastname55@example.com,flastname55pass
-FirstName48,LastName48,14/12/2019,7790,4,Father_LastName48,Mother_LastName48,996 Maple St,7452402352,3.9,firstname48.lastname48@example.com,flastname48pass
-FirstName50,LastName50,14/10/2019,6873,4,Father_LastName50,Mother_LastName50,329 Oak St,4683857762,3.8,firstname50.lastname50@example.com,flastname50pass
-FirstName48,LastName48,14/12/2019,1765,4,Father_LastName48,Mother_LastName48,655 Birch St,6293718172,3.5,firstname48.lastname48@example.com,flastname48pass
 FirstName52,LastName52,14/08/2019,8552,4,Father_LastName52,Mother_LastName52,202 Pine St,1552852086,3.4,firstname52.lastname52@example.com,flastname52pass
-FirstName59,LastName59,14/01/2019,8494,4,Father_LastName59,Mother_LastName59,371 Birch St,7413706665,3.6,firstname59.lastname59@example.com,flastname59pass
-FirstName53,LastName53,14/07/2019,5843,4,Father_LastName53,Mother_LastName53,231 Oak St,1439558107,3.5,firstname53.lastname53@example.com,flastname53pass
-FirstName53,LastName53,14/07/2019,2496,4,Father_LastName53,Mother_LastName53,501 Birch St,4781598503,3.4,firstname53.lastname53@example.com,flastname53pass
-FirstName52,LastName52,14/08/2019,6247,4,Father_LastName52,Mother_LastName52,320 Pine St,6093024911,3.7,firstname52.lastname52@example.com,flastname52pass
-FirstName54,LastName54,14/06/2019,6596,4,Father_LastName54,Mother_LastName54,357 Maple St,3902200868,4.0,firstname54.lastname54@example.com,flastname54pass
 FirstName89,LastName89,14/07/2016,5874,7,Father_LastName89,Mother_LastName89,282 Maple St,3343230800,3.7,firstname89.lastname89@example.com,flastname89pass
-FirstName174,LastName174,14/06/2009,4280,14,Father_LastName174,Mother_LastName174,584 Oak St,8352920273,3.6,firstname174.lastname174@example.com,flastname174pass
-FirstName83,LastName83,14/01/2017,3689,6,Father_LastName83,Mother_LastName83,617 Pine St,3381502296,3.9,firstname83.lastname83@example.com,flastname83pass
-FirstName95,LastName95,14/01/2016,8726,7,Father_LastName95,Mother_LastName95,231 Maple St,7860490082,3.1,firstname95.lastname95@example.com,flastname95pass
-FirstName69,LastName69,14/03/2018,8064,5,Father_LastName69,Mother_LastName69,781 Oak St,5648079623,3.5,firstname69.lastname69@example.com,flastname69pass
 FirstName196,LastName196,14/08/2007,9956,16,Father_LastName196,Mother_LastName196,305 Pine St,3220227322,3.7,firstname196.lastname196@example.com,flastname196pass
-FirstName85,LastName85,14/12/2023,5191,7,Father_LastName85,Mother_LastName85,306 Pine St,9869543057,3.2,firstname85.lastname85@example.com,flastname85pass
-FirstName87,LastName87,14/09/2016,1199,7,Father_LastName87,Mother_LastName87,476 Pine St,8898489680,3.1,firstname87.lastname87@example.com,flastname87pass
-FirstName199,LastName199,14/05/2007,1851,16,Father_LastName199,Mother_LastName199,184 Maple St,4705621483,3.5,firstname199.lastname199@example.com,flastname199pass
-FirstName164,LastName164,14/04/2010,8550,13,Father_LastName164,Mother_LastName164,733 Maple St,5454256851,3.6,firstname164.lastname164@example.com,flastname164pass
 FirstName65,LastName65,14/07/2018,4238,5,Father_LastName65,Mother_LastName65,179 Maple St,5541895347,3.4,firstname65.lastname65@example.com,flastname65pass
 FirstName121,LastName121,14/11/2013,9139,10,Father_LastName121,Mother_LastName121,612 Oak St,6208514874,3.4,firstname121.lastname121@example.com,flastname121pass
