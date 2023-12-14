@@ -5,7 +5,7 @@
  */
 package neu.edu.csye6200.userInterface;
 
-import java.awt.CardLayout;
+import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -173,6 +173,7 @@ public class TeacherJPanel extends javax.swing.JPanel {
         jLabel1.setText("Teacher Details");
         add(jLabel1);
         jLabel1.setBounds(300, 20, 430, 58);
+
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/tea.jpg"))); // NOI18N
         add(jLabel2);

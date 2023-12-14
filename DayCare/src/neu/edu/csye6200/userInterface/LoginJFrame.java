@@ -16,6 +16,8 @@ import neu.edu.csye6200.model.Student;
 import neu.edu.csye6200.model.Teacher;
 import neu.edu.csye6200.util.FileIO;
 
+import javax.swing.*;
+
 /**
  *
  * @author sahilmattoo
@@ -46,7 +48,8 @@ public class LoginJFrame extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txtFieldPassword = new javax.swing.JTextField();
+//        txtFieldPassword = new javax.swing.JTextField();
+        txtFieldPassword = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -130,11 +133,14 @@ public class LoginJFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       
+        boolean credentialsCorrect = false;
+        char[] passwordChars = txtFieldPassword.getPassword();
+        String password = new String(passwordChars);
+
         if (txtFieldUsername.getText().equalsIgnoreCase("admin") 
-                && txtFieldPassword.getText().equalsIgnoreCase("admin") )
+                && password.equalsIgnoreCase("admin") )
         {
-             
+            credentialsCorrect = true;
             MainJFrame mainjframe = new MainJFrame();
             mainjframe.setVisible(true);
             MainController controller = new MainController(mainjframe);
@@ -151,8 +157,9 @@ public class LoginJFrame extends javax.swing.JFrame {
         }
         for (Teacher t : teacher){
             if (t.getEmailid().equalsIgnoreCase(txtFieldUsername.getText()) 
-                    && t.getPassword().equalsIgnoreCase(txtFieldPassword.getText()) )
+                    && t.getPassword().equalsIgnoreCase(password) )
             {
+                credentialsCorrect = true;
                 TeacherJFrame teacherjframe = new TeacherJFrame(t);
                 teacherjframe.setVisible(true);
                 dispose();
@@ -168,15 +175,19 @@ public class LoginJFrame extends javax.swing.JFrame {
         }
         for (Student s : student){
             if (s.getEmailid().equalsIgnoreCase(txtFieldUsername.getText()) 
-                    && s.getPassword().equalsIgnoreCase(txtFieldPassword.getText()) )
+                    && s.getPassword().equalsIgnoreCase(password) )
             {
+                credentialsCorrect = true;
                 StudentJFrame studentjframe = new StudentJFrame(s);
                                 studentjframe.setVisible(true);
                                 dispose();
 
             }
         }
-        
+
+        if (!credentialsCorrect) {
+            JOptionPane.showMessageDialog(this, "Please provide correct credentials", "Login Failed", JOptionPane.ERROR_MESSAGE);
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -228,7 +239,7 @@ public class LoginJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField txtFieldPassword;
+    private javax.swing.JPasswordField txtFieldPassword;
     private javax.swing.JTextField txtFieldUsername;
     // End of variables declaration//GEN-END:variables
 }
