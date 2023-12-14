@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author moinu
+ * @author sahilmattoo
  */
 public class AddStudentJPanel extends javax.swing.JPanel {
 
@@ -55,33 +55,33 @@ public class AddStudentJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Add Student");
         add(jLabel1);
-        jLabel1.setBounds(6, 6, 596, 26);
+        jLabel1.setBounds(150, 20, 596, 30);
 
-        jLabel2.setText("FirstName:");
+        jLabel2.setText("FirstName");
         add(jLabel2);
-        jLabel2.setBounds(107, 42, 154, 19);
+        jLabel2.setBounds(330, 90, 154, 19);
         add(txtFieldFName);
-        txtFieldFName.setBounds(267, 38, 236, 26);
+        txtFieldFName.setBounds(320, 110, 236, 26);
 
-        jLabel3.setText("LastName:");
+        jLabel3.setText("LastName");
         add(jLabel3);
-        jLabel3.setBounds(107, 76, 154, 14);
+        jLabel3.setBounds(330, 150, 154, 14);
         add(txtFieldLName);
-        txtFieldLName.setBounds(267, 70, 236, 26);
+        txtFieldLName.setBounds(320, 170, 236, 26);
 
-        jLabel4.setText("Age:");
+        jLabel4.setText("Age");
         add(jLabel4);
-        jLabel4.setBounds(107, 107, 154, 16);
+        jLabel4.setBounds(330, 210, 154, 16);
         add(txtFieldAge);
-        txtFieldAge.setBounds(267, 102, 236, 26);
+        txtFieldAge.setBounds(320, 230, 236, 26);
 
         jLabel5.setText("Father Name:");
         add(jLabel5);
-        jLabel5.setBounds(107, 140, 154, 16);
+        jLabel5.setBounds(330, 270, 154, 16);
 
         txtFieldFatherName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,13 +89,13 @@ public class AddStudentJPanel extends javax.swing.JPanel {
             }
         });
         add(txtFieldFatherName);
-        txtFieldFatherName.setBounds(267, 130, 236, 26);
+        txtFieldFatherName.setBounds(320, 300, 236, 26);
 
         jLabel6.setText("MotherName:");
         add(jLabel6);
-        jLabel6.setBounds(107, 167, 154, 16);
+        jLabel6.setBounds(330, 340, 154, 16);
         add(txtFieldMotherName);
-        txtFieldMotherName.setBounds(267, 162, 236, 26);
+        txtFieldMotherName.setBounds(320, 370, 236, 26);
 
         btnAdd.setText("Add Student");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -104,35 +104,35 @@ public class AddStudentJPanel extends javax.swing.JPanel {
             }
         });
         add(btnAdd);
-        btnAdd.setBounds(197, 338, 136, 37);
+        btnAdd.setBounds(320, 680, 240, 37);
 
         jLabel7.setText("Address");
         add(jLabel7);
-        jLabel7.setBounds(107, 194, 154, 16);
+        jLabel7.setBounds(330, 410, 154, 16);
         add(txtFieldAddress);
-        txtFieldAddress.setBounds(267, 194, 236, 26);
+        txtFieldAddress.setBounds(320, 440, 236, 26);
 
         jLabel8.setText("Phone No");
         add(jLabel8);
-        jLabel8.setBounds(107, 232, 154, 16);
+        jLabel8.setBounds(330, 480, 154, 16);
         add(txtPhoneNo);
-        txtPhoneNo.setBounds(267, 232, 236, 26);
+        txtPhoneNo.setBounds(320, 500, 236, 26);
 
         jLabel9.setText("Email");
         add(jLabel9);
-        jLabel9.setBounds(107, 264, 154, 16);
+        jLabel9.setBounds(330, 540, 154, 16);
         add(txtEmail);
-        txtEmail.setBounds(267, 264, 236, 26);
+        txtEmail.setBounds(320, 560, 236, 26);
 
         jLabel10.setText("Password");
         add(jLabel10);
-        jLabel10.setBounds(107, 300, 154, 16);
+        jLabel10.setBounds(330, 600, 154, 16);
         add(txtPassword);
-        txtPassword.setBounds(267, 300, 236, 26);
+        txtPassword.setBounds(320, 630, 236, 26);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Hero_Student.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/studensmall.jpg"))); // NOI18N
         add(jLabel11);
-        jLabel11.setBounds(0, 0, 930, 570);
+        jLabel11.setBounds(-1510, -60, 2780, 1150);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFieldFatherNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldFatherNameActionPerformed

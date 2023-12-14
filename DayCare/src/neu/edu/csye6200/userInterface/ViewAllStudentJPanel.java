@@ -184,12 +184,13 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(studentsTable);
 
         jLayeredPane1.add(jScrollPane1);
-        jScrollPane1.setBounds(60, 120, 879, 316);
+        jScrollPane1.setBounds(60, 120, 879, 410);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
         jLabel1.setText("All Students");
         jLayeredPane1.add(jLabel1);
-        jLabel1.setBounds(410, 70, 140, 30);
+        jLabel1.setBounds(360, 20, 310, 70);
 
         sortByGPAButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByGPAButton.setText("Sort By GPA");
@@ -199,7 +200,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             }
         });
         jLayeredPane1.add(sortByGPAButton);
-        sortByGPAButton.setBounds(781, 448, 123, 29);
+        sortByGPAButton.setBounds(810, 560, 123, 50);
 
         sortByIdButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByIdButton.setText("Sort By ID");
@@ -209,7 +210,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             }
         });
         jLayeredPane1.add(sortByIdButton);
-        sortByIdButton.setBounds(163, 448, 109, 29);
+        sortByIdButton.setBounds(60, 560, 109, 50);
 
         sortByNameButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByNameButton.setText("Sort By Name");
@@ -219,11 +220,11 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             }
         });
         jLayeredPane1.add(sortByNameButton);
-        sortByNameButton.setBounds(452, 448, 134, 29);
+        sortByNameButton.setBounds(430, 560, 134, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/s12.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/studensmall.jpg"))); // NOI18N
         jLayeredPane1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 990, 620);
+        jLabel2.setBounds(-1480, -340, 2670, 1270);
 
         add(jLayeredPane1);
         jLayeredPane1.setBounds(0, 0, 980, 640);
