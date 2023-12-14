@@ -8,6 +8,7 @@ package neu.edu.csye6200.userInterface;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import neu.edu.csye6200.interfaces.StudentDataMangementFactory;
 import neu.edu.csye6200.model.Student;
@@ -144,6 +145,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         sortByGPAButton = new javax.swing.JButton();
         sortByIdButton = new javax.swing.JButton();
         sortByNameButton = new javax.swing.JButton();
+        btnAddStudent = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
@@ -186,10 +188,11 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         jLayeredPane1.add(jScrollPane1);
         jScrollPane1.setBounds(60, 120, 879, 316);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
         jLabel1.setText("All Students");
         jLayeredPane1.add(jLabel1);
-        jLabel1.setBounds(410, 70, 140, 30);
+        jLabel1.setBounds(350, 38, 300, 90);
 
         sortByGPAButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByGPAButton.setText("Sort By GPA");
@@ -221,9 +224,20 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         jLayeredPane1.add(sortByNameButton);
         sortByNameButton.setBounds(452, 448, 134, 29);
 
+        btnAddStudent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnAddStudent.setForeground(new java.awt.Color(0, 0, 102));
+        btnAddStudent.setText("Delete Student");
+        btnAddStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddStudentActionPerformed(evt);
+            }
+        });
+        jLayeredPane1.add(btnAddStudent);
+        btnAddStudent.setBounds(400, 510, 220, 40);
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/s12.png"))); // NOI18N
         jLayeredPane1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 990, 620);
+        jLabel2.setBounds(10, 0, 990, 620);
 
         add(jLayeredPane1);
         jLayeredPane1.setBounds(0, 0, 980, 640);
@@ -244,8 +258,36 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         sortStudentByName();
     }//GEN-LAST:event_sortByNameButtonActionPerformed
 
+    private void btnAddStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddStudentActionPerformed
+
+        int selectedRowIndex = studentsTable.getSelectedRow();
+    
+    // Check if a row is selected
+    if(selectedRowIndex >= 0) {
+        // Get the model of the table
+        DefaultTableModel model = (DefaultTableModel) studentsTable.getModel();
+        
+        // Get the student ID at the selected row, which is at column 0
+        int studentIdToDelete = (int) model.getValueAt(selectedRowIndex, 0);
+        
+        // Create a Student object with the ID
+        Student studentToDelete = new Student();
+        studentToDelete.setStuId(studentIdToDelete);
+        
+        // Call the method to delete the student from the data list
+        StudentDataMangementFactory.getFactoryInstance().getObject().deleteOneObject(studentToDelete);
+        
+        // Remove the row from the table model
+        model.removeRow(selectedRowIndex);
+    } else {
+        // No row selected to delete
+        JOptionPane.showMessageDialog(null, "Please select a student to delete");
+    }
+    }//GEN-LAST:event_btnAddStudentActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddStudent;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
