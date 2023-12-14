@@ -47,11 +47,15 @@ public class RenewalJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
         lblRenewal = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRenewalRecords = new javax.swing.JTable();
         btnRenew = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+
+        jScrollPane2.setViewportView(jTextPane1);
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
@@ -61,7 +65,7 @@ public class RenewalJPanel extends javax.swing.JPanel {
         lblRenewal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRenewal.setText("Renewal For Students");
         add(lblRenewal);
-        lblRenewal.setBounds(160, 40, 577, 30);
+        lblRenewal.setBounds(160, 30, 577, 30);
 
         tblRenewalRecords.setBackground(new java.awt.Color(153, 153, 153));
         tblRenewalRecords.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -79,7 +83,7 @@ public class RenewalJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblRenewalRecords);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(110, 110, 690, 320);
+        jScrollPane1.setBounds(110, 110, 690, 500);
 
         btnRenew.setBackground(new java.awt.Color(255, 255, 255));
         btnRenew.setFont(new java.awt.Font("Hiragino Maru Gothic ProN", 1, 36)); // NOI18N
@@ -93,12 +97,12 @@ public class RenewalJPanel extends javax.swing.JPanel {
             }
         });
         add(btnRenew);
-        btnRenew.setBounds(540, 460, 268, 50);
+        btnRenew.setBounds(540, 650, 268, 50);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 102));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/immu.jpeg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/vaccination-test.jpg"))); // NOI18N
         add(jLabel1);
-        jLabel1.setBounds(0, 0, 900, 630);
+        jLabel1.setBounds(-1360, -270, 3450, 1630);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRenewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRenewActionPerformed
@@ -110,6 +114,8 @@ public class RenewalJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnRenew;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel lblRenewal;
     private javax.swing.JTable tblRenewalRecords;
     // End of variables declaration//GEN-END:variables
