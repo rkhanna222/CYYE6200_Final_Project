@@ -9,6 +9,8 @@ import neu.edu.csye6200.controller.MainController;
 import neu.edu.csye6200.controller.TeacherController;
 import neu.edu.csye6200.model.Teacher;
 
+import javax.swing.*;
+
 /**
  *
  * @author raghavkhanna
@@ -23,6 +25,9 @@ public class TeacherJFrame extends javax.swing.JFrame {
     public TeacherJFrame(Teacher t) {
         initComponents();
         this.teacher = t;
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(1200, 800);
+        setLocationRelativeTo(null);
     }
 
 
