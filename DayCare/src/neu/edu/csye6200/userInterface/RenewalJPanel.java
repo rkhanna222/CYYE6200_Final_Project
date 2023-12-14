@@ -56,14 +56,17 @@ public class RenewalJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        lblRenewal.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        lblRenewal.setForeground(new java.awt.Color(0, 0, 153));
+        lblRenewal.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lblRenewal.setForeground(new java.awt.Color(0, 0, 102));
         lblRenewal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRenewal.setText("Renewal For Students");
         add(lblRenewal);
-        lblRenewal.setBounds(100, 40, 577, 30);
+        lblRenewal.setBounds(160, 40, 577, 30);
 
+        tblRenewalRecords.setBackground(new java.awt.Color(153, 153, 153));
         tblRenewalRecords.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tblRenewalRecords.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        tblRenewalRecords.setForeground(new java.awt.Color(255, 255, 255));
         tblRenewalRecords.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -72,20 +75,35 @@ public class RenewalJPanel extends javax.swing.JPanel {
                 "Fiirst Name", "Last Name", "Last Renewal", "Age", "Id"
             }
         ));
+        tblRenewalRecords.setRowHeight(25);
         jScrollPane1.setViewportView(tblRenewalRecords);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(36, 90, 690, 226);
+        jScrollPane1.setBounds(110, 110, 690, 320);
 
-        btnRenew.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        btnRenew.setBackground(new java.awt.Color(255, 255, 255));
+        btnRenew.setFont(new java.awt.Font("Hiragino Maru Gothic ProN", 1, 36)); // NOI18N
+        btnRenew.setForeground(new java.awt.Color(0, 0, 102));
         btnRenew.setText("Renew");
+        btnRenew.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnRenew.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btnRenew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRenewActionPerformed(evt);
+            }
+        });
         add(btnRenew);
-        btnRenew.setBounds(250, 350, 268, 50);
+        btnRenew.setBounds(540, 460, 268, 50);
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 102));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/immu.jpeg"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(0, 0, 900, 630);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRenewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRenewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRenewActionPerformed
 
   
     // Variables declaration - do not modify//GEN-BEGIN:variables

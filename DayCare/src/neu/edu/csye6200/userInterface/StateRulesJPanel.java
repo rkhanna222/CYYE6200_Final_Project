@@ -46,19 +46,23 @@ public class StateRulesJPanel extends javax.swing.JPanel {
         jTable4 = new javax.swing.JTable();
         jTable1 = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel1.setText("Massachusetts Immunization Rules :");
+        jLabel1.setFont(new java.awt.Font("Al Bayan", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Massachusetts Immunization Rules");
         add(jLabel1);
-        jLabel1.setBounds(160, 70, 280, 30);
+        jLabel1.setBounds(140, 20, 680, 60);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("Vaccine Name                       Dosage                                 Duration");
+        jLabel2.setFont(new java.awt.Font("Al Bayan", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Vaccine Name                       Dosage                                 Duration                                   ");
         add(jLabel2);
-        jLabel2.setBounds(20, 190, 836, 22);
+        jLabel2.setBounds(60, 260, 840, 60);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6 - 24", "25 - 48", "49 - 59", "Above 59" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
@@ -67,9 +71,11 @@ public class StateRulesJPanel extends javax.swing.JPanel {
             }
         });
         add(jComboBox2);
-        jComboBox2.setBounds(440, 60, 104, 50);
+        jComboBox2.setBounds(44, 170, 820, 50);
 
+        jTable3.setBackground(new java.awt.Color(153, 153, 153));
         jTable3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTable3.setForeground(new java.awt.Color(255, 255, 255));
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"HiB","1 - 4","6 Months"},
@@ -82,9 +88,11 @@ public class StateRulesJPanel extends javax.swing.JPanel {
         ));
         jTable3.setVisible(false);
         add(jTable3);
-        jTable3.setBounds(20, 220, 810, 150);
+        jTable3.setBounds(50, 320, 810, 150);
 
+        jTable2.setBackground(new java.awt.Color(153, 153, 153));
         jTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTable2.setForeground(new java.awt.Color(255, 255, 255));
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -99,9 +107,11 @@ public class StateRulesJPanel extends javax.swing.JPanel {
         ));
         jTable2.setVisible(false);
         add(jTable2);
-        jTable2.setBounds(15, 219, 810, 150);
+        jTable2.setBounds(50, 320, 810, 150);
 
+        jTable4.setBackground(new java.awt.Color(153, 153, 153));
         jTable4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTable4.setForeground(new java.awt.Color(255, 255, 255));
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"HiB","1 - 4","8 Months"},
@@ -115,9 +125,11 @@ public class StateRulesJPanel extends javax.swing.JPanel {
         ));
         jTable4.setVisible(false);
         add(jTable4);
-        jTable4.setBounds(19, 217, 810, 150);
+        jTable4.setBounds(50, 320, 810, 150);
 
+        jTable1.setBackground(new java.awt.Color(153, 153, 153));
         jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -133,11 +145,27 @@ public class StateRulesJPanel extends javax.swing.JPanel {
         ));
         jTable1.setVisible(true);
         add(jTable1);
-        jTable1.setBounds(20, 220, 810, 147);
+        jTable1.setBounds(50, 320, 810, 147);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/map.jpeg"))); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/aaron-burden-1zR3WNSTnvY-unsplash (1).jpg"))); // NOI18N
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         add(jLabel3);
-        jLabel3.setBounds(0, 0, 850, 550);
+        jLabel3.setBounds(-20, 0, 1110, 800);
+
+        jLabel4.setFont(new java.awt.Font("Al Bayan", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Massachusetts Immunization Rules");
+        add(jLabel4);
+        jLabel4.setBounds(140, 20, 680, 60);
+
+        jLabel5.setFont(new java.awt.Font("Al Bayan", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Vaccine Name                       Dosage                                 Duration");
+        add(jLabel5);
+        jLabel5.setBounds(60, 280, 840, 37);
     }// </editor-fold>//GEN-END:initComponents
 
     
@@ -202,6 +230,8 @@ return this.jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
