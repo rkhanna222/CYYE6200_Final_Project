@@ -45,36 +45,44 @@ public class UpdateTeacherJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Update Teacher");
         add(jLabel1);
-        jLabel1.setBounds(6, 34, 624, 23);
+        jLabel1.setBounds(140, 30, 624, 50);
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("First Name");
         add(jLabel2);
-        jLabel2.setBounds(133, 91, 140, 16);
+        jLabel2.setBounds(290, 170, 140, 16);
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Last Name:");
         add(jLabel3);
-        jLabel3.setBounds(133, 123, 140, 16);
+        jLabel3.setBounds(290, 210, 140, 20);
 
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Class Room Assigned:");
         add(jLabel4);
-        jLabel4.setBounds(133, 155, 140, 23);
+        jLabel4.setBounds(290, 250, 180, 23);
 
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Teacher Id:");
         add(jLabel5);
-        jLabel5.setBounds(133, 187, 140, 16);
+        jLabel5.setBounds(290, 290, 140, 17);
         add(txtFieldFName);
-        txtFieldFName.setBounds(285, 91, 193, 26);
+        txtFieldFName.setBounds(460, 170, 193, 26);
         add(txtFieldLName);
-        txtFieldLName.setBounds(285, 123, 193, 26);
+        txtFieldLName.setBounds(460, 210, 193, 26);
 
         textFieldClassRoomAssigned.setEditable(false);
         add(textFieldClassRoomAssigned);
-        textFieldClassRoomAssigned.setBounds(285, 155, 193, 26);
+        textFieldClassRoomAssigned.setBounds(460, 250, 193, 26);
 
         textFieldTeacherId.setEditable(false);
         textFieldTeacherId.addActionListener(new java.awt.event.ActionListener() {
@@ -83,15 +91,15 @@ public class UpdateTeacherJPanel extends javax.swing.JPanel {
             }
         });
         add(textFieldTeacherId);
-        textFieldTeacherId.setBounds(285, 187, 193, 26);
+        textFieldTeacherId.setBounds(460, 290, 193, 26);
 
         btnUpdate.setText("Update");
         add(btnUpdate);
-        btnUpdate.setBounds(285, 231, 128, 32);
+        btnUpdate.setBounds(450, 340, 210, 40);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/teach.jpeg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/teacher-back.jpg"))); // NOI18N
         add(jLabel6);
-        jLabel6.setBounds(0, 0, 640, 500);
+        jLabel6.setBounds(-1490, -80, 2870, 1640);
     }// </editor-fold>//GEN-END:initComponents
 
     private void textFieldTeacherIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldTeacherIdActionPerformed

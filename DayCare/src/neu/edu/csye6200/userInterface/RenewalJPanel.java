@@ -93,12 +93,12 @@ public class RenewalJPanel extends javax.swing.JPanel {
             }
         });
         add(btnRenew);
-        btnRenew.setBounds(540, 460, 268, 50);
+        btnRenew.setBounds(110, 460, 268, 50);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 102));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/immu.jpeg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pexels-anna-shvets-3786215.jpg"))); // NOI18N
         add(jLabel1);
-        jLabel1.setBounds(0, 0, 900, 630);
+        jLabel1.setBounds(-1140, -70, 2330, 1260);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRenewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRenewActionPerformed

@@ -200,13 +200,13 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(studentsTable);
 
         jLayeredPane1.add(jScrollPane1);
-        jScrollPane1.setBounds(60, 120, 879, 316);
+        jScrollPane1.setBounds(90, 140, 879, 410);
 
         totalStudentsLabel.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        totalStudentsLabel.setForeground(new java.awt.Color(0, 0, 102));
+        totalStudentsLabel.setForeground(new java.awt.Color(255, 255, 255));
         totalStudentsLabel.setText("Total Students : 0");
         jLayeredPane1.add(totalStudentsLabel);
-        totalStudentsLabel.setBounds(380, 700, 330, 90);
+        totalStudentsLabel.setBounds(50, 670, 330, 90);
 
         sortByGPAButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByGPAButton.setText("Sort By GPA");
@@ -216,7 +216,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             }
         });
         jLayeredPane1.add(sortByGPAButton);
-        sortByGPAButton.setBounds(781, 448, 123, 29);
+        sortByGPAButton.setBounds(550, 560, 170, 40);
 
         sortByIdButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByIdButton.setText("Sort By ID");
@@ -226,7 +226,7 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             }
         });
         jLayeredPane1.add(sortByIdButton);
-        sortByIdButton.setBounds(163, 448, 109, 29);
+        sortByIdButton.setBounds(90, 560, 160, 40);
 
         sortByNameButton.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         sortByNameButton.setText("Sort By Name");
@@ -236,10 +236,9 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             }
         });
         jLayeredPane1.add(sortByNameButton);
-        sortByNameButton.setBounds(452, 448, 134, 29);
+        sortByNameButton.setBounds(310, 560, 180, 40);
 
-        btnAddStudent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnAddStudent.setForeground(new java.awt.Color(0, 0, 102));
+        btnAddStudent.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnAddStudent.setText("Delete Student");
         btnAddStudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,17 +246,17 @@ public class ViewAllStudentJPanel extends javax.swing.JPanel {
             }
         });
         jLayeredPane1.add(btnAddStudent);
-        btnAddStudent.setBounds(400, 510, 220, 40);
+        btnAddStudent.setBounds(760, 560, 210, 40);
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 102));
         jLabel3.setText("All Students");
         jLayeredPane1.add(jLabel3);
-        jLabel3.setBounds(350, 38, 300, 90);
+        jLabel3.setBounds(380, 30, 300, 90);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/s12.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/studensmall.jpg"))); // NOI18N
         jLayeredPane1.add(jLabel2);
-        jLabel2.setBounds(10, 0, 1050, 770);
+        jLabel2.setBounds(-1520, -340, 2790, 1630);
 
         add(jLayeredPane1);
         jLayeredPane1.setBounds(0, 0, 1150, 790);

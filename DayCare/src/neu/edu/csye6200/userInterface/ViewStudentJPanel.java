@@ -65,6 +65,9 @@ public class ViewStudentJPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         textFieldTeachersSize = new javax.swing.JTextField();
         textFieldClassRoomName = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -81,25 +84,26 @@ public class ViewStudentJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblStudents);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(32, 97, 556, 180);
+        jScrollPane1.setBounds(26, 110, 560, 180);
 
-        btnBack.setText("<Back ");
+        btnBack.setForeground(new java.awt.Color(0, 51, 153));
+        btnBack.setText("<Go Back ");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(32, 7, 87, 29);
+        btnBack.setBounds(32, 7, 130, 40);
         add(jLabel2);
         jLabel2.setBounds(32, 283, 120, 0);
 
         lblTeacher.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblTeacher.setForeground(new java.awt.Color(0, 51, 153));
+        lblTeacher.setForeground(new java.awt.Color(255, 255, 255));
         lblTeacher.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTeacher.setText("Teacher Details");
         add(lblTeacher);
-        lblTeacher.setBounds(32, 298, 556, 23);
+        lblTeacher.setBounds(-40, 330, 556, 20);
 
         tblTeacherRecord.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -120,13 +124,14 @@ public class ViewStudentJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblTeacherRecord);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(32, 339, 556, 85);
+        jScrollPane2.setBounds(20, 350, 440, 300);
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Student Details");
         add(jLabel1);
-        jLabel1.setBounds(32, 54, 556, 20);
+        jLabel1.setBounds(230, 80, 560, 20);
 
         tblStudentRecordForTeacher.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -139,63 +144,78 @@ public class ViewStudentJPanel extends javax.swing.JPanel {
         jScrollPane3.setViewportView(tblStudentRecordForTeacher);
 
         add(jScrollPane3);
-        jScrollPane3.setBounds(30, 440, 556, 167);
+        jScrollPane3.setBounds(530, 350, 450, 300);
 
-        btnStudenAssignedToATeacher.setText("Students Assigned to a Single Teacher");
+        btnStudenAssignedToATeacher.setForeground(new java.awt.Color(0, 51, 153));
+        btnStudenAssignedToATeacher.setText("See assigned students");
         btnStudenAssignedToATeacher.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnStudenAssignedToATeacherActionPerformed(evt);
             }
         });
         add(btnStudenAssignedToATeacher);
-        btnStudenAssignedToATeacher.setBounds(606, 364, 284, 51);
+        btnStudenAssignedToATeacher.setBounds(14, 680, 970, 40);
 
         textFieldStudentsSize.setEditable(false);
         add(textFieldStudentsSize);
-        textFieldStudentsSize.setBounds(606, 175, 120, 35);
+        textFieldStudentsSize.setBounds(780, 210, 200, 35);
 
         textFieldMaxAge.setEditable(false);
         add(textFieldMaxAge);
-        textFieldMaxAge.setBounds(723, 97, 117, 35);
+        textFieldMaxAge.setBounds(780, 160, 200, 35);
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 51, 153));
         jLabel3.setText("Min Age");
         add(jLabel3);
-        jLabel3.setBounds(606, 56, 76, 16);
+        jLabel3.setBounds(600, 120, 76, 16);
 
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 153));
         jLabel4.setText("MaxAge");
         add(jLabel4);
-        jLabel4.setBounds(723, 56, 107, 16);
+        jLabel4.setBounds(600, 170, 107, 16);
 
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 51, 153));
         jLabel5.setText("Capactiy Of Students");
         add(jLabel5);
-        jLabel5.setBounds(606, 153, 137, 16);
+        jLabel5.setBounds(600, 220, 150, 16);
 
         textFieldMinAge1.setEditable(false);
         add(textFieldMinAge1);
-        textFieldMinAge1.setBounds(606, 97, 105, 35);
+        textFieldMinAge1.setBounds(780, 110, 200, 35);
 
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 153));
         jLabel6.setText("Capactiy Of Teachers");
         add(jLabel6);
-        jLabel6.setBounds(606, 220, 137, 16);
+        jLabel6.setBounds(600, 270, 160, 16);
 
         textFieldTeachersSize.setEditable(false);
         add(textFieldTeachersSize);
-        textFieldTeachersSize.setBounds(606, 242, 120, 35);
+        textFieldTeachersSize.setBounds(780, 260, 200, 35);
 
         textFieldClassRoomName.setEditable(false);
-        textFieldClassRoomName.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        textFieldClassRoomName.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         textFieldClassRoomName.setForeground(new java.awt.Color(0, 51, 153));
         textFieldClassRoomName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         add(textFieldClassRoomName);
-        textFieldClassRoomName.setBounds(247, 6, 182, 27);
+        textFieldClassRoomName.setBounds(430, 20, 182, 27);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/students.jpeg"))); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Assigned students");
+        add(jLabel8);
+        jLabel8.setBounds(680, 330, 230, 16);
+        add(jSeparator1);
+        jSeparator1.setBounds(-100, 60, 1130, 10);
+        add(jSeparator2);
+        jSeparator2.setBounds(-30, 310, 1080, 10);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/tea.jpg"))); // NOI18N
         add(jLabel7);
-        jLabel7.setBounds(420, 450, 600, 230);
+        jLabel7.setBounds(-150, -70, 1370, 940);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -262,9 +282,12 @@ public class ViewStudentJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblTeacher;
     private javax.swing.JTable tblStudentRecordForTeacher;
     private javax.swing.JTable tblStudents;
