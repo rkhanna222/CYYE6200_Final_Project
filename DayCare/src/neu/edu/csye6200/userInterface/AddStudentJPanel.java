@@ -55,33 +55,33 @@ public class AddStudentJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Add Student");
         add(jLabel1);
-        jLabel1.setBounds(6, 6, 596, 26);
+        jLabel1.setBounds(6, 6, 650, 80);
 
         jLabel2.setText("FirstName:");
         add(jLabel2);
-        jLabel2.setBounds(107, 42, 154, 19);
+        jLabel2.setBounds(110, 130, 154, 19);
         add(txtFieldFName);
-        txtFieldFName.setBounds(267, 38, 236, 26);
+        txtFieldFName.setBounds(270, 126, 236, 30);
 
         jLabel3.setText("LastName:");
         add(jLabel3);
-        jLabel3.setBounds(107, 76, 154, 14);
+        jLabel3.setBounds(110, 170, 154, 14);
         add(txtFieldLName);
-        txtFieldLName.setBounds(267, 70, 236, 26);
+        txtFieldLName.setBounds(270, 160, 236, 30);
 
         jLabel4.setText("Age:");
         add(jLabel4);
-        jLabel4.setBounds(107, 107, 154, 16);
+        jLabel4.setBounds(110, 210, 154, 16);
         add(txtFieldAge);
-        txtFieldAge.setBounds(267, 102, 236, 26);
+        txtFieldAge.setBounds(270, 200, 236, 30);
 
         jLabel5.setText("Father Name:");
         add(jLabel5);
-        jLabel5.setBounds(107, 140, 154, 16);
+        jLabel5.setBounds(110, 250, 154, 16);
 
         txtFieldFatherName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,13 +89,13 @@ public class AddStudentJPanel extends javax.swing.JPanel {
             }
         });
         add(txtFieldFatherName);
-        txtFieldFatherName.setBounds(267, 130, 236, 26);
+        txtFieldFatherName.setBounds(270, 240, 236, 30);
 
         jLabel6.setText("MotherName:");
         add(jLabel6);
-        jLabel6.setBounds(107, 167, 154, 16);
+        jLabel6.setBounds(110, 290, 154, 16);
         add(txtFieldMotherName);
-        txtFieldMotherName.setBounds(267, 162, 236, 26);
+        txtFieldMotherName.setBounds(270, 280, 236, 30);
 
         btnAdd.setText("Add Student");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -104,35 +104,35 @@ public class AddStudentJPanel extends javax.swing.JPanel {
             }
         });
         add(btnAdd);
-        btnAdd.setBounds(197, 338, 136, 37);
+        btnAdd.setBounds(270, 490, 230, 37);
 
         jLabel7.setText("Address");
         add(jLabel7);
-        jLabel7.setBounds(107, 194, 154, 16);
+        jLabel7.setBounds(110, 330, 154, 16);
         add(txtFieldAddress);
-        txtFieldAddress.setBounds(267, 194, 236, 26);
+        txtFieldAddress.setBounds(270, 320, 236, 30);
 
         jLabel8.setText("Phone No");
         add(jLabel8);
-        jLabel8.setBounds(107, 232, 154, 16);
+        jLabel8.setBounds(110, 370, 154, 16);
         add(txtPhoneNo);
-        txtPhoneNo.setBounds(267, 232, 236, 26);
+        txtPhoneNo.setBounds(270, 360, 236, 30);
 
         jLabel9.setText("Email");
         add(jLabel9);
-        jLabel9.setBounds(107, 264, 154, 16);
+        jLabel9.setBounds(110, 410, 154, 16);
         add(txtEmail);
-        txtEmail.setBounds(267, 264, 236, 26);
+        txtEmail.setBounds(270, 400, 236, 30);
 
         jLabel10.setText("Password");
         add(jLabel10);
-        jLabel10.setBounds(107, 300, 154, 16);
+        jLabel10.setBounds(110, 450, 154, 16);
         add(txtPassword);
-        txtPassword.setBounds(267, 300, 236, 26);
+        txtPassword.setBounds(270, 440, 236, 30);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Hero_Student.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/studensmall.jpg"))); // NOI18N
         add(jLabel11);
-        jLabel11.setBounds(0, 0, 930, 570);
+        jLabel11.setBounds(-1510, -250, 2780, 1490);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFieldFatherNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldFatherNameActionPerformed

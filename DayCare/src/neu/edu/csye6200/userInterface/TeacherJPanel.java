@@ -169,15 +169,14 @@ public class TeacherJPanel extends javax.swing.JPanel {
         btnDelete.setBounds(670, 470, 205, 60);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
         jLabel1.setText("Teacher Details");
         add(jLabel1);
         jLabel1.setBounds(300, 20, 430, 58);
 
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/tea.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/teacher-back.jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(-410, -90, 1910, 860);
+        jLabel2.setBounds(-1450, -40, 2950, 1740);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateTeacherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateTeacherActionPerformed

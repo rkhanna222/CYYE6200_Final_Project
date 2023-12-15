@@ -85,7 +85,7 @@ public class StatsJPanel extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(330, 200, 420, 150);
+        jButton1.setBounds(320, 200, 420, 150);
 
         jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jButton2.setText("Student Immunization Graph");
@@ -95,17 +95,17 @@ public class StatsJPanel extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(330, 410, 420, 150);
+        jButton2.setBounds(320, 410, 420, 150);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Statistics");
         add(jLabel2);
         jLabel2.setBounds(400, 20, 240, 80);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/stats1.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/analytics.jpg"))); // NOI18N
         add(jLabel1);
-        jLabel1.setBounds(0, 0, 990, 750);
+        jLabel1.setBounds(-990, -1330, 3400, 2340);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
