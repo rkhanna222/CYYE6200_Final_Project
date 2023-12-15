@@ -53,34 +53,40 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
         jTextFieldCredit = new javax.swing.JTextField();
         jTextFieldEmail = new javax.swing.JTextField();
         jTextFieldClassAssigned = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel1.setText("Last Name :");
         add(jLabel1);
-        jLabel1.setBounds(76, 64, 104, 16);
+        jLabel1.setBounds(440, 190, 104, 17);
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel2.setText("First Name : ");
         add(jLabel2);
-        jLabel2.setBounds(76, 32, 80, 16);
+        jLabel2.setBounds(440, 150, 100, 17);
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel3.setText("Teacher ID :  ");
         add(jLabel3);
-        jLabel3.setBounds(76, 101, 104, 16);
+        jLabel3.setBounds(440, 230, 100, 17);
 
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel4.setText("Credit : ");
         add(jLabel4);
-        jLabel4.setBounds(76, 133, 104, 16);
+        jLabel4.setBounds(470, 260, 60, 17);
 
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel5.setText("Email : ");
         add(jLabel5);
-        jLabel5.setBounds(76, 166, 104, 16);
+        jLabel5.setBounds(470, 290, 60, 20);
 
-        jLabel6.setText("Class Assigned :");
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pro.jpeg"))); // NOI18N
         add(jLabel6);
-        jLabel6.setBounds(76, 204, 104, 16);
+        jLabel6.setBounds(100, 50, 260, 440);
 
         jTextFieldFirstName.setEditable(false);
         jTextFieldFirstName.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +95,7 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
             }
         });
         add(jTextFieldFirstName);
-        jTextFieldFirstName.setBounds(192, 27, 109, 26);
+        jTextFieldFirstName.setBounds(550, 150, 130, 26);
 
         jTextFieldLastName.setEditable(false);
         jTextFieldLastName.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +104,7 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
             }
         });
         add(jTextFieldLastName);
-        jTextFieldLastName.setBounds(192, 59, 109, 26);
+        jTextFieldLastName.setBounds(550, 190, 130, 26);
 
         jTextFieldTeacherID.setEditable(false);
         jTextFieldTeacherID.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +113,7 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
             }
         });
         add(jTextFieldTeacherID);
-        jTextFieldTeacherID.setBounds(192, 91, 109, 26);
+        jTextFieldTeacherID.setBounds(550, 230, 130, 26);
 
         jTextFieldCredit.setEditable(false);
         jTextFieldCredit.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +122,7 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
             }
         });
         add(jTextFieldCredit);
-        jTextFieldCredit.setBounds(192, 123, 109, 26);
+        jTextFieldCredit.setBounds(550, 260, 130, 26);
 
         jTextFieldEmail.setEditable(false);
         jTextFieldEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +131,7 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
             }
         });
         add(jTextFieldEmail);
-        jTextFieldEmail.setBounds(192, 161, 109, 26);
+        jTextFieldEmail.setBounds(550, 290, 130, 26);
 
         jTextFieldClassAssigned.setEditable(false);
         jTextFieldClassAssigned.addActionListener(new java.awt.event.ActionListener() {
@@ -134,11 +140,16 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
             }
         });
         add(jTextFieldClassAssigned);
-        jTextFieldClassAssigned.setBounds(192, 199, 109, 26);
+        jTextFieldClassAssigned.setBounds(550, 330, 130, 26);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/teacher.jpg"))); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel8.setText("Class Assigned :");
+        add(jLabel8);
+        jLabel8.setBounds(400, 330, 118, 17);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/tea.jpg"))); // NOI18N
         add(jLabel7);
-        jLabel7.setBounds(0, 0, 620, 430);
+        jLabel7.setBounds(0, 0, 790, 580);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFirstNameActionPerformed
@@ -225,6 +236,7 @@ public class TeacherProfileJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTextFieldClassAssigned;
     private javax.swing.JTextField jTextFieldCredit;
     private javax.swing.JTextField jTextFieldEmail;
