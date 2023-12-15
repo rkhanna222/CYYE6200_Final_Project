@@ -129,14 +129,14 @@ public class StudentJFrame extends javax.swing.JFrame {
         getContentPane().add(txtFieldReview);
         txtFieldReview.setBounds(430, 460, 130, 26);
 
-        btnDone.setText("Done");
+        btnDone.setText("Submit");
         btnDone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoneActionPerformed(evt);
             }
         });
         getContentPane().add(btnDone);
-        btnDone.setBounds(400, 510, 77, 29);
+        btnDone.setBounds(380, 500, 140, 29);
 
         jBtnBack.setText("Logout");
         jBtnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -145,14 +145,12 @@ public class StudentJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jBtnBack);
-        jBtnBack.setBounds(740, 540, 88, 29);
+        jBtnBack.setBounds(750, 30, 88, 40);
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel9.setText("Give Rating");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(330, 310, 220, 100);
-
-        jSeparator2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jSeparator2);
         jSeparator2.setBounds(0, 300, 860, 12);
 
