@@ -49,7 +49,9 @@ public class DisplayStudentJPanel extends javax.swing.JPanel {
         jTableDisplayStudent = new javax.swing.JTable();
         jButtonUpdateGPA = new javax.swing.JButton();
         jTextFieldUpdateGPA = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -67,7 +69,7 @@ public class DisplayStudentJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jTableDisplayStudent);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(17, 6, 490, 234);
+        jScrollPane1.setBounds(50, 130, 490, 234);
 
         jButtonUpdateGPA.setText("Update");
         jButtonUpdateGPA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -77,17 +79,25 @@ public class DisplayStudentJPanel extends javax.swing.JPanel {
             }
         });
         add(jButtonUpdateGPA);
-        jButtonUpdateGPA.setBounds(42, 262, 46, 18);
+        jButtonUpdateGPA.setBounds(290, 450, 250, 30);
         add(jTextFieldUpdateGPA);
-        jTextFieldUpdateGPA.setBounds(228, 258, 79, 26);
+        jTextFieldUpdateGPA.setBounds(290, 396, 250, 30);
 
-        jLabel1.setText("GPA");
-        add(jLabel1);
-        jLabel1.setBounds(183, 258, 39, 26);
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabel3.setText("Update GPA");
+        add(jLabel3);
+        jLabel3.setBounds(70, 10, 460, 80);
+        add(jSeparator1);
+        jSeparator1.setBounds(-40, 90, 1050, 20);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ss.jpeg"))); // NOI18N
+        jLabel4.setText("Enter the updated GPA:");
+        add(jLabel4);
+        jLabel4.setBounds(50, 400, 144, 16);
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/studensmall.jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 550, 320);
+        jLabel2.setBounds(-1480, -110, 2560, 1170);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonUpdateGPAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateGPAActionPerformed
@@ -118,9 +128,11 @@ public class DisplayStudentJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonUpdateGPA;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTableDisplayStudent;
     private javax.swing.JTextField jTextFieldUpdateGPA;
     // End of variables declaration//GEN-END:variables
