@@ -44,19 +44,33 @@ public class UpdateImmuizationJPanel extends javax.swing.JPanel {
         btnUpdateImmunization = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         textFieldId = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Update Immunization");
+        add(jLabel1);
+        jLabel1.setBounds(220, 20, 584, 90);
 
-        jLabel2.setText("Immunization Name:");
+        jLabel2.setText("Immunization Name");
+        add(jLabel2);
+        jLabel2.setBounds(340, 140, 180, 24);
+        add(textFieldName);
+        textFieldName.setBounds(340, 170, 300, 26);
 
-        jLabel3.setText("Immunization Date:");
+        jLabel3.setText("Immunization Date");
+        add(jLabel3);
+        jLabel3.setBounds(340, 210, 120, 24);
+        add(textFieldDate);
+        textFieldDate.setBounds(340, 250, 300, 26);
 
-        jLabel4.setText("Is Immunization Taken:");
+        jLabel4.setText("Is Immunization Taken");
+        add(jLabel4);
+        jLabel4.setBounds(340, 310, 144, 16);
 
         radioBtnYes.setText("Yes");
         radioBtnYes.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +78,8 @@ public class UpdateImmuizationJPanel extends javax.swing.JPanel {
                 radioBtnYesActionPerformed(evt);
             }
         });
+        add(radioBtnYes);
+        radioBtnYes.setBounds(360, 350, 54, 23);
 
         raadioBtnNo.setText("No");
         raadioBtnNo.addActionListener(new java.awt.event.ActionListener() {
@@ -71,14 +87,20 @@ public class UpdateImmuizationJPanel extends javax.swing.JPanel {
                 raadioBtnNoActionPerformed(evt);
             }
         });
+        add(raadioBtnNo);
+        raadioBtnNo.setBounds(530, 350, 50, 23);
 
-        jLabel5.setText("Duration:");
+        jLabel5.setText("Duration");
+        add(jLabel5);
+        jLabel5.setBounds(340, 410, 111, 16);
 
         textFieldDuration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldDurationActionPerformed(evt);
             }
         });
+        add(textFieldDuration);
+        textFieldDuration.setBounds(340, 440, 300, 26);
 
         btnUpdateImmunization.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnUpdateImmunization.setText("Update Immunization");
@@ -87,88 +109,24 @@ public class UpdateImmuizationJPanel extends javax.swing.JPanel {
                 btnUpdateImmunizationActionPerformed(evt);
             }
         });
+        add(btnUpdateImmunization);
+        btnUpdateImmunization.setBounds(340, 600, 300, 36);
 
-        jLabel6.setText("Immunization Id:");
+        jLabel6.setText("Immunization Id");
+        add(jLabel6);
+        jLabel6.setBounds(340, 500, 111, 14);
 
         textFieldId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldIdActionPerformed(evt);
             }
         });
+        add(textFieldId);
+        textFieldId.setBounds(340, 530, 300, 26);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(textFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(textFieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(radioBtnYes)
-                                        .addComponent(raadioBtnNo))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnUpdateImmunization, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldDuration, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
-                                    .addComponent(textFieldId))))
-                        .addGap(0, 168, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(radioBtnYes)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(raadioBtnNo)))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(textFieldDuration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnUpdateImmunization, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(198, Short.MAX_VALUE))
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pexels-anna-shvets-3786215.jpg"))); // NOI18N
+        add(jLabel7);
+        jLabel7.setBounds(-1190, 0, 2520, 1240);
     }// </editor-fold>//GEN-END:initComponents
 
     private void radioBtnYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioBtnYesActionPerformed
@@ -230,6 +188,7 @@ public class UpdateImmuizationJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JRadioButton raadioBtnNo;
     private javax.swing.JRadioButton radioBtnYes;
     private javax.swing.JTextField textFieldDate;
